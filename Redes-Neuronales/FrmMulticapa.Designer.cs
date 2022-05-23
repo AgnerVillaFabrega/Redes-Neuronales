@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BtmCargar = new System.Windows.Forms.Button();
             this.gbCapa1 = new System.Windows.Forms.GroupBox();
+            this.nudCap1NumNeur = new System.Windows.Forms.NumericUpDown();
             this.cbNumCapas = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -67,17 +68,17 @@
             this.gbW23 = new System.Windows.Forms.GroupBox();
             this.dgvW23 = new System.Windows.Forms.DataGridView();
             this.gbCapa2 = new System.Windows.Forms.GroupBox();
+            this.nudCap2NumNeur = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.cbFA_capa2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.gbCapa3 = new System.Windows.Forms.GroupBox();
+            this.nudCap3NumNeur = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.cbFA_capa3 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.nudCap1NumNeur = new System.Windows.Forms.NumericUpDown();
-            this.nudCap2NumNeur = new System.Windows.Forms.NumericUpDown();
-            this.nudCap3NumNeur = new System.Windows.Forms.NumericUpDown();
             this.gbCapa1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCap1NumNeur)).BeginInit();
             this.gbCapaSalida.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.panelMVCapa2.SuspendLayout();
@@ -97,9 +98,8 @@
             this.gbW23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvW23)).BeginInit();
             this.gbCapa2.SuspendLayout();
-            this.gbCapa3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCap1NumNeur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCap2NumNeur)).BeginInit();
+            this.gbCapa3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCap3NumNeur)).BeginInit();
             this.SuspendLayout();
             // 
@@ -176,7 +176,7 @@
             this.BtmCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtmCargar.Font = new System.Drawing.Font("JetBrains Mono NL SemiBold", 8.999999F, System.Drawing.FontStyle.Bold);
             this.BtmCargar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-            this.BtmCargar.Location = new System.Drawing.Point(520, 89);
+            this.BtmCargar.Location = new System.Drawing.Point(455, 87);
             this.BtmCargar.Name = "BtmCargar";
             this.BtmCargar.Size = new System.Drawing.Size(93, 27);
             this.BtmCargar.TabIndex = 33;
@@ -199,6 +199,14 @@
             this.gbCapa1.TabIndex = 34;
             this.gbCapa1.TabStop = false;
             this.gbCapa1.Text = "Capa #1";
+            // 
+            // nudCap1NumNeur
+            // 
+            this.nudCap1NumNeur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
+            this.nudCap1NumNeur.Location = new System.Drawing.Point(304, 32);
+            this.nudCap1NumNeur.Name = "nudCap1NumNeur";
+            this.nudCap1NumNeur.Size = new System.Drawing.Size(43, 23);
+            this.nudCap1NumNeur.TabIndex = 41;
             // 
             // cbNumCapas
             // 
@@ -591,6 +599,14 @@
             this.gbCapa2.TabStop = false;
             this.gbCapa2.Text = "Capa #2";
             // 
+            // nudCap2NumNeur
+            // 
+            this.nudCap2NumNeur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
+            this.nudCap2NumNeur.Location = new System.Drawing.Point(304, 34);
+            this.nudCap2NumNeur.Name = "nudCap2NumNeur";
+            this.nudCap2NumNeur.Size = new System.Drawing.Size(43, 23);
+            this.nudCap2NumNeur.TabIndex = 42;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -646,6 +662,14 @@
             this.gbCapa3.TabStop = false;
             this.gbCapa3.Text = "Capa #3";
             // 
+            // nudCap3NumNeur
+            // 
+            this.nudCap3NumNeur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
+            this.nudCap3NumNeur.Location = new System.Drawing.Point(304, 29);
+            this.nudCap3NumNeur.Name = "nudCap3NumNeur";
+            this.nudCap3NumNeur.Size = new System.Drawing.Size(43, 23);
+            this.nudCap3NumNeur.TabIndex = 43;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -685,30 +709,6 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Numero de neuronas";
             // 
-            // nudCap1NumNeur
-            // 
-            this.nudCap1NumNeur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
-            this.nudCap1NumNeur.Location = new System.Drawing.Point(304, 32);
-            this.nudCap1NumNeur.Name = "nudCap1NumNeur";
-            this.nudCap1NumNeur.Size = new System.Drawing.Size(43, 23);
-            this.nudCap1NumNeur.TabIndex = 41;
-            // 
-            // nudCap2NumNeur
-            // 
-            this.nudCap2NumNeur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
-            this.nudCap2NumNeur.Location = new System.Drawing.Point(304, 34);
-            this.nudCap2NumNeur.Name = "nudCap2NumNeur";
-            this.nudCap2NumNeur.Size = new System.Drawing.Size(43, 23);
-            this.nudCap2NumNeur.TabIndex = 42;
-            // 
-            // nudCap3NumNeur
-            // 
-            this.nudCap3NumNeur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
-            this.nudCap3NumNeur.Location = new System.Drawing.Point(304, 29);
-            this.nudCap3NumNeur.Name = "nudCap3NumNeur";
-            this.nudCap3NumNeur.Size = new System.Drawing.Size(43, 23);
-            this.nudCap3NumNeur.TabIndex = 43;
-            // 
             // FrmMulticapa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -734,6 +734,7 @@
             this.Text = "FrmMulticapa";
             this.gbCapa1.ResumeLayout(false);
             this.gbCapa1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCap1NumNeur)).EndInit();
             this.gbCapaSalida.ResumeLayout(false);
             this.gbCapaSalida.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -755,10 +756,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvW23)).EndInit();
             this.gbCapa2.ResumeLayout(false);
             this.gbCapa2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCap2NumNeur)).EndInit();
             this.gbCapa3.ResumeLayout(false);
             this.gbCapa3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCap1NumNeur)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCap2NumNeur)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCap3NumNeur)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
