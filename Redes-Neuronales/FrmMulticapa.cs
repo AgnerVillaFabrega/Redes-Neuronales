@@ -60,8 +60,15 @@ namespace Redes_Neuronales
             variables.GenerarMatriz(WE,Variables._entradas,C1);
             variables.GenerarMatriz(W3S,C1,Variables._salidas);
 
+            variables.GuardarMatriz(WE, Variables._entradas, Variables._salidas, "Matriz WE.txt");
+            variables.GuardarMatriz(W3S, Variables._entradas, Variables._salidas, "Matriz E3S.txt");
+
             variables.GenerarVector(U1,C1);
             variables.GenerarVector(US,Variables._salidas);
+
+
+            variables.GuardarVector(U1, C1, "Vector U1.txt");
+            variables.GuardarVector(US, Variables._salidas, "Vector US.txt");
 
             variables.Mostrarmatriz(WE, dgvWE,Variables._entradas,C1);
             variables.Mostrarmatriz(W3S, dgvW3S, C1, Variables._salidas);
@@ -86,9 +93,18 @@ namespace Redes_Neuronales
             variables.GenerarMatriz(W12, C1, C2);
             variables.GenerarMatriz(W3S, C2, Variables._salidas);
 
+            variables.GuardarMatriz(WE, Variables._entradas, C1, "Matriz WE.txt");
+            variables.GuardarMatriz(W12, C1, C2,"Matriz W12.txt");
+            variables.GuardarMatriz(W3S, C2, Variables._salidas,"Matriz W3S.txt");
+
+
             variables.GenerarVector(U1,C1);
             variables.GenerarVector(U2,C2);
             variables.GenerarVector(US,Variables._salidas);
+
+            variables.GuardarVector(U1, C1, "Vector U1.txt");
+            variables.GuardarVector(U2, C2, "Vector U2.txt");
+            variables.GuardarVector(US, Variables._salidas,"Vector US.txt");
 
             variables.Mostrarmatriz(WE, dgvWE,Variables._entradas,C1);
             variables.Mostrarmatriz(W12, dgvW12,C1,C2);
@@ -119,10 +135,20 @@ namespace Redes_Neuronales
             variables.GenerarMatriz(W23, C2, C3);
             variables.GenerarMatriz(W3S,C3, Variables._salidas);
 
+            variables.GuardarMatriz(WE, Variables._entradas, C1,"Matriz WE.txt");
+            variables.GuardarMatriz(W12, C1, C2, "Matriz W12.txt");
+            variables.GuardarMatriz(W23, C2, C3, "Matriz W23.txt");
+            variables.GuardarMatriz(W3S, C3, Variables._salidas, "Matriz W3S.txt");
+
             variables.GenerarVector(U1, C1);
             variables.GenerarVector(U2,C2);
             variables.GenerarVector(U3,C3);
             variables.GenerarVector(US,Variables._salidas);
+
+            variables.GuardarVector(U1, C1,"Vector U1.txt");
+            variables.GuardarVector(U2, C2, "Vector U2.txt");
+            variables.GuardarVector(U3, C3, "Vector U3.txt");
+            variables.GuardarVector(US, Variables._salidas, "Vector US.txt");
 
             variables.Mostrarmatriz(WE, dgvWE,Variables._entradas,C1);
             variables.Mostrarmatriz(W12, dgvW12,C1,C2);
@@ -170,6 +196,15 @@ namespace Redes_Neuronales
 
         private void BtmCargar_Click(object sender, EventArgs e)
         {
+            variables.BorrarArchivos("Matriz WE.txt");
+            variables.BorrarArchivos("Matriz W12.txt");
+            variables.BorrarArchivos("Matriz W23.txt");
+            variables.BorrarArchivos("Matriz W3S.txt");
+            variables.BorrarArchivos("Vector U1.txt");
+            variables.BorrarArchivos("Vector U2.txt");
+            variables.BorrarArchivos("Vector U3.txt");
+            variables.BorrarArchivos("Vector US.txt");
+
             cbAE_multicapa.Items.Clear();
             txtNumNeuronas_Salida.Text = Variables._salidas.ToString();
             LlenarComboBox();

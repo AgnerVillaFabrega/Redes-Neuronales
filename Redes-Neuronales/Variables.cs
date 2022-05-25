@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,7 +41,10 @@ namespace Redes_Neuronales
             }
 
         }
-
+        public void BorrarArchivos(string nombre)
+        {
+            File.Delete(nombre);
+        }
         public void GenerarVector( double[] VectorUmbral, int columnas)
         {
             for (int x = 0; x < columnas; x++)
@@ -72,11 +76,7 @@ namespace Redes_Neuronales
                 for (int c = 0; c < columnas; c++)
                 {
                     dataGridView.Rows[f].Cells[c].Value = matrizPeso[f, c].ToString();
-                    //lsw.Items.Add(matrizPeso[f, c].ToString());
-                    //label.Text = matrizPeso[f, c].ToString();
-                    Console.Write(matrizPeso[f, c] + " ");
                 }
-                Console.WriteLine();
             }
         }
         public void MostrarVector(double[] VectorUmbral, ListBox listBox, int columnas)
@@ -85,11 +85,47 @@ namespace Redes_Neuronales
             {
                 //listView.Items.Add(VectorUmbral[c].ToString());
                 listBox.Items.Add(VectorUmbral[c]);
-                Console.WriteLine(VectorUmbral[c]);
             }
-            Console.WriteLine();
         }
+        public void GuardarVector(double[] VectorUmbral,int columnas,string nombre)
+        {
+            string resultado = "";
+            for (int c = 0; c < columnas; c++)
+            {
+                resultado += VectorUmbral[c].ToString();
+                if (c < (columnas - 1))
+                {
+                    resultado += ";";
+                }
+            }
+            TextWriter textWriter = new StreamWriter(nombre);
+            textWriter.Write(resultado);
+            textWriter.Close();
+        }
+        public void GuardarMatriz(double[,] matrizPesos, int filas, int columnas, string nombre)
+        {
+            string resultado ="";
 
+            for (int f = 0; f < filas; f++)
+            {
+                for (int c = 0; c < columnas; c++)
+                {
+                    resultado += matrizPesos[f,c].ToString();
+                    if (c<(columnas-1))
+                    {
+                        resultado += ";";
+                    }
+
+                }
+                if (f < (filas - 1))
+                {
+                    resultado += "\n";
+                }
+            }
+            TextWriter textWriter = new StreamWriter(nombre);
+            textWriter.Write(resultado);
+            textWriter.Close();
+        }
         #region Funcion limpiar campos
         public void Limpiar(Control control)
         {

@@ -27,9 +27,11 @@ namespace Redes_Neuronales
             VectorUmbralUnicapa = new double[Variables._salidas];
 
             variables.GenerarMatriz(MatrizPesoUnicapa,Variables._entradas,Variables._salidas);
+            variables.GuardarMatriz(MatrizPesoUnicapa, Variables._entradas, Variables._salidas,"Matriz de peso unicapa.txt");
             variables.Mostrarmatriz(MatrizPesoUnicapa, dgvMatrizPesos,Variables._entradas,Variables._salidas);
 
             variables.GenerarVector(VectorUmbralUnicapa,Variables._salidas);
+            variables.GuardarVector(VectorUmbralUnicapa, Variables._salidas, "Vector de umbrales unicapa.txt");
             variables.MostrarVector(VectorUmbralUnicapa, lsbVectorUmbrales,Variables._salidas);
         }
         public void LlenarComboBox()
@@ -59,6 +61,9 @@ namespace Redes_Neuronales
         }
         private void BtmCargar_Click(object sender, EventArgs e)
         {
+            variables.BorrarArchivos("Matriz de peso unicapa.txt");
+            variables.BorrarArchivos("Matriz de peso unicapa.txt");
+
             lsbVectorUmbrales.Items.Clear();
             dgvMatrizPesos.Rows.Clear();
             cbAE_unicapa.Items.Clear();
