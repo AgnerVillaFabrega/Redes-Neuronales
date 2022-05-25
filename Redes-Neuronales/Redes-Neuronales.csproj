@@ -80,12 +80,6 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSeleccionArchivo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmSeleccionArchivo.Designer.cs">
-      <DependentUpon>FrmSeleccionArchivo.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmUnicapa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,9 +94,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmSeleccionArchivo.resx">
-      <DependentUpon>FrmSeleccionArchivo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUnicapa.resx">
       <DependentUpon>FrmUnicapa.cs</DependentUpon>

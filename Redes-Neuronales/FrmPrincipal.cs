@@ -16,7 +16,9 @@ namespace Redes_Neuronales
         FrmUnicapa unicapa = new FrmUnicapa();
         public FrmPrincipal()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            cbTipoRed.SelectedIndex = 0;
+            cbSeleccionCapa.SelectedIndex = 0;
         }
 
         private void AbrirFrm2(object frmHija)
@@ -73,9 +75,6 @@ namespace Redes_Neuronales
                     lb_salidas.Text = Variables._salidas.ToString();
                     lb_patrones.Text = Variables._patrones.ToString();
                     cbTipoRed.Enabled = true;
-
-
-
                 }
             }
             catch (Exception)
@@ -110,6 +109,11 @@ namespace Redes_Neuronales
             {
                 panelPaso3.Enabled = true;
                 AbrirFrm2(new FrmMulticapa());
+            }
+            else if(cbSeleccionCapa.Text.Equals("Seleccione tipo de capas"))
+            {
+               panelPaso3.Enabled=false;
+                panelContenedorTipo.Controls.Clear();
             }
         }
     }

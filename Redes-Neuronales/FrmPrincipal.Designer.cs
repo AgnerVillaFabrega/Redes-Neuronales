@@ -254,16 +254,17 @@
             this.cbTipoRed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(82)))), ((int)(((byte)(102)))));
             this.cbTipoRed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoRed.Enabled = false;
-            this.cbTipoRed.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Italic);
+            this.cbTipoRed.Font = new System.Drawing.Font("JetBrains Mono", 8.999999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTipoRed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
             this.cbTipoRed.FormattingEnabled = true;
             this.cbTipoRed.Items.AddRange(new object[] {
+            "Seleccione tipo de red",
             "Perceptron",
             "Adaline",
             "Backpropagation"});
             this.cbTipoRed.Location = new System.Drawing.Point(941, 12);
             this.cbTipoRed.Name = "cbTipoRed";
-            this.cbTipoRed.Size = new System.Drawing.Size(210, 25);
+            this.cbTipoRed.Size = new System.Drawing.Size(210, 24);
             this.cbTipoRed.TabIndex = 25;
             this.cbTipoRed.SelectedIndexChanged += new System.EventHandler(this.cbTipoRed_SelectedIndexChanged_1);
             // 
@@ -273,15 +274,16 @@
             this.cbSeleccionCapa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(82)))), ((int)(((byte)(102)))));
             this.cbSeleccionCapa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSeleccionCapa.Enabled = false;
-            this.cbSeleccionCapa.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Italic);
+            this.cbSeleccionCapa.Font = new System.Drawing.Font("JetBrains Mono", 8.999999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSeleccionCapa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
             this.cbSeleccionCapa.FormattingEnabled = true;
             this.cbSeleccionCapa.Items.AddRange(new object[] {
+            "Seleccione tipo de capas",
             "Unicapa",
             "Multicapa"});
             this.cbSeleccionCapa.Location = new System.Drawing.Point(941, 51);
             this.cbSeleccionCapa.Name = "cbSeleccionCapa";
-            this.cbSeleccionCapa.Size = new System.Drawing.Size(210, 25);
+            this.cbSeleccionCapa.Size = new System.Drawing.Size(210, 24);
             this.cbSeleccionCapa.TabIndex = 24;
             this.cbSeleccionCapa.SelectedIndexChanged += new System.EventHandler(this.cbSeleccionCapa_SelectedIndexChanged);
             // 

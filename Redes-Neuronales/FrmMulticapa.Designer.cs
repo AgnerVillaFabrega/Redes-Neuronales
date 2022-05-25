@@ -204,6 +204,11 @@
             // 
             this.nudCap1NumNeur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.nudCap1NumNeur.Location = new System.Drawing.Point(304, 32);
+            this.nudCap1NumNeur.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
             this.nudCap1NumNeur.Name = "nudCap1NumNeur";
             this.nudCap1NumNeur.Size = new System.Drawing.Size(43, 23);
             this.nudCap1NumNeur.TabIndex = 41;
@@ -363,7 +368,7 @@
             // 
             this.panelMVCapa2.Controls.Add(this.groupBox4);
             this.panelMVCapa2.Controls.Add(this.gbW12);
-            this.panelMVCapa2.Location = new System.Drawing.Point(31, 259);
+            this.panelMVCapa2.Location = new System.Drawing.Point(445, 67);
             this.panelMVCapa2.Name = "panelMVCapa2";
             this.panelMVCapa2.Size = new System.Drawing.Size(398, 181);
             this.panelMVCapa2.TabIndex = 41;
@@ -409,9 +414,12 @@
             this.dgvW12.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
             this.dgvW12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvW12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvW12.ColumnHeadersVisible = false;
             this.dgvW12.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
             this.dgvW12.Location = new System.Drawing.Point(6, 22);
             this.dgvW12.Name = "dgvW12";
+            this.dgvW12.ReadOnly = true;
+            this.dgvW12.RowHeadersVisible = false;
             this.dgvW12.Size = new System.Drawing.Size(268, 136);
             this.dgvW12.TabIndex = 28;
             // 
@@ -465,9 +473,12 @@
             this.dgvWE.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
             this.dgvWE.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvWE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvWE.ColumnHeadersVisible = false;
             this.dgvWE.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
             this.dgvWE.Location = new System.Drawing.Point(6, 22);
             this.dgvWE.Name = "dgvWE";
+            this.dgvWE.ReadOnly = true;
+            this.dgvWE.RowHeadersVisible = false;
             this.dgvWE.Size = new System.Drawing.Size(268, 136);
             this.dgvWE.TabIndex = 28;
             // 
@@ -521,9 +532,12 @@
             this.dgvW3S.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
             this.dgvW3S.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvW3S.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvW3S.ColumnHeadersVisible = false;
             this.dgvW3S.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
             this.dgvW3S.Location = new System.Drawing.Point(6, 22);
             this.dgvW3S.Name = "dgvW3S";
+            this.dgvW3S.ReadOnly = true;
+            this.dgvW3S.RowHeadersVisible = false;
             this.dgvW3S.Size = new System.Drawing.Size(268, 136);
             this.dgvW3S.TabIndex = 28;
             // 
@@ -531,7 +545,7 @@
             // 
             this.panelMVCapa3.Controls.Add(this.groupBox11);
             this.panelMVCapa3.Controls.Add(this.gbW23);
-            this.panelMVCapa3.Location = new System.Drawing.Point(443, 67);
+            this.panelMVCapa3.Location = new System.Drawing.Point(16, 265);
             this.panelMVCapa3.Name = "panelMVCapa3";
             this.panelMVCapa3.Size = new System.Drawing.Size(410, 181);
             this.panelMVCapa3.TabIndex = 38;
@@ -565,7 +579,7 @@
             this.gbW23.Controls.Add(this.dgvW23);
             this.gbW23.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 8.999999F, System.Drawing.FontStyle.Italic);
             this.gbW23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
-            this.gbW23.Location = new System.Drawing.Point(13, 7);
+            this.gbW23.Location = new System.Drawing.Point(13, 3);
             this.gbW23.Name = "gbW23";
             this.gbW23.Size = new System.Drawing.Size(282, 164);
             this.gbW23.TabIndex = 36;
@@ -577,9 +591,12 @@
             this.dgvW23.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
             this.dgvW23.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvW23.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvW23.ColumnHeadersVisible = false;
             this.dgvW23.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
             this.dgvW23.Location = new System.Drawing.Point(6, 22);
             this.dgvW23.Name = "dgvW23";
+            this.dgvW23.ReadOnly = true;
+            this.dgvW23.RowHeadersVisible = false;
             this.dgvW23.Size = new System.Drawing.Size(268, 136);
             this.dgvW23.TabIndex = 28;
             // 
@@ -603,6 +620,11 @@
             // 
             this.nudCap2NumNeur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.nudCap2NumNeur.Location = new System.Drawing.Point(304, 34);
+            this.nudCap2NumNeur.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
             this.nudCap2NumNeur.Name = "nudCap2NumNeur";
             this.nudCap2NumNeur.Size = new System.Drawing.Size(43, 23);
             this.nudCap2NumNeur.TabIndex = 42;
@@ -666,6 +688,11 @@
             // 
             this.nudCap3NumNeur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.nudCap3NumNeur.Location = new System.Drawing.Point(304, 29);
+            this.nudCap3NumNeur.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
             this.nudCap3NumNeur.Name = "nudCap3NumNeur";
             this.nudCap3NumNeur.Size = new System.Drawing.Size(43, 23);
             this.nudCap3NumNeur.TabIndex = 43;
