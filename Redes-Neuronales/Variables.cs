@@ -19,14 +19,15 @@ namespace Redes_Neuronales
         public static int _patrones { get; set; }
 
         static Random _R = new Random();
-        static double _Dec;
-        static double _Num;
-        static double _Res;
-
+        
         public static string ValorCbTipo { get; set; }
 
-        public double NumerosAleatorios()
+        public static double NumerosAleatorios()
         {
+            double _Dec;
+            double _Num;
+            double _Res;
+
             _Dec = _R.NextDouble();
             _Num = _R.Next(-1, 1);
             if (_Num == 0)
@@ -41,53 +42,20 @@ namespace Redes_Neuronales
             }
 
         }
-        public void BorrarArchivos(string nombre)
+        
+        public static void BorrarArchivos(string nombre)
         {
             File.Delete(nombre);
         }
-        public void GenerarVector( double[] VectorUmbral, int columnas)
-        {
+
+        public static void GenerarVector(double[] VectorUmbral, int columnas){
+
             for (int x = 0; x < columnas; x++)
             {
                 VectorUmbral[x] = Math.Round(NumerosAleatorios(), 6);
             }
         }
-
-        public void GenerarMatriz(double[,] MatrizPeso,int filas, int columnas)
-        {
-            for (int i = 0; i < filas; i++)
-            {
-                for (int j = 0; j < columnas; j++)
-                {
-                    MatrizPeso[i, j] = Math.Round(NumerosAleatorios(), 6);
-                }
-            }
-        }
-        
-        public void Mostrarmatriz(double[,] matrizPeso,DataGridView dataGridView,int filas, int columnas)
-        {
-            Console.WriteLine("filas: " + filas);
-            Console.WriteLine("columnas: " + columnas);
-            dataGridView.RowCount = filas;
-            dataGridView.ColumnCount = columnas;
-
-            for (int f = 0; f < filas; f++)
-            {
-                for (int c = 0; c < columnas; c++)
-                {
-                    dataGridView.Rows[f].Cells[c].Value = matrizPeso[f, c].ToString();
-                }
-            }
-        }
-        public void MostrarVector(double[] VectorUmbral, ListBox listBox, int columnas)
-        {
-            for (int c = 0; c < columnas; c++)
-            {
-                //listView.Items.Add(VectorUmbral[c].ToString());
-                listBox.Items.Add(VectorUmbral[c]);
-            }
-        }
-        public void GuardarVector(double[] VectorUmbral,int columnas,string nombre)
+        public static void GuardarVector(double[] VectorUmbral, int columnas, string nombre)
         {
             string resultado = "";
             for (int c = 0; c < columnas; c++)
@@ -102,7 +70,27 @@ namespace Redes_Neuronales
             textWriter.Write(resultado);
             textWriter.Close();
         }
-        public void GuardarMatriz(double[,] matrizPesos, int filas, int columnas, string nombre)
+        public static void MostrarVector(double[] VectorUmbral, ListBox listBox, int columnas)
+        {
+            for (int c = 0; c < columnas; c++)
+            {
+                //listView.Items.Add(VectorUmbral[c].ToString());
+                listBox.Items.Add(VectorUmbral[c]);
+            }
+        }
+
+
+        public static void GenerarMatriz(double[,] MatrizPeso,int filas, int columnas)
+        {
+            for (int i = 0; i < filas; i++)
+            {
+                for (int j = 0; j < columnas; j++)
+                {
+                    MatrizPeso[i, j] = Math.Round(NumerosAleatorios(), 6);
+                }
+            }
+        }     
+        public static void GuardarMatriz(double[,] matrizPesos, int filas, int columnas, string nombre)
         {
             string resultado ="";
 
@@ -126,6 +114,22 @@ namespace Redes_Neuronales
             textWriter.Write(resultado);
             textWriter.Close();
         }
+        public static void Mostrarmatriz(double[,] matrizPeso,DataGridView dataGridView,int filas, int columnas)
+        {
+            Console.WriteLine("filas: " + filas);
+            Console.WriteLine("columnas: " + columnas);
+            dataGridView.RowCount = filas;
+            dataGridView.ColumnCount = columnas;
+
+            for (int f = 0; f < filas; f++)
+            {
+                for (int c = 0; c < columnas; c++)
+                {
+                    dataGridView.Rows[f].Cells[c].Value = matrizPeso[f, c].ToString();
+                }
+            }
+        }
+
         #region Funcion limpiar campos
         public void Limpiar(Control control)
         {

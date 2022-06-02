@@ -12,57 +12,56 @@ namespace Redes_Neuronales
 {
     public partial class FrmUnicapa : Form
     {
-        Variables variables = new Variables();
+        
         public double[,] MatrizPesoUnicapa;
         public double[] VectorUmbralUnicapa;
-        public FrmUnicapa()
-        {
+        public FrmUnicapa(){
+
             InitializeComponent();
             BtmCargar.Enabled = true;
             
         }
-        public void _Generar()
-        {
+
+        public void _Generar(){
+
             MatrizPesoUnicapa = new double[Variables._entradas, Variables._salidas];
             VectorUmbralUnicapa = new double[Variables._salidas];
 
-            variables.GenerarMatriz(MatrizPesoUnicapa,Variables._entradas,Variables._salidas);
-            variables.GuardarMatriz(MatrizPesoUnicapa, Variables._entradas, Variables._salidas,"Matriz de peso unicapa.txt");
-            variables.Mostrarmatriz(MatrizPesoUnicapa, dgvMatrizPesos,Variables._entradas,Variables._salidas);
-
-            variables.GenerarVector(VectorUmbralUnicapa,Variables._salidas);
-            variables.GuardarVector(VectorUmbralUnicapa, Variables._salidas, "Vector de umbrales unicapa.txt");
-            variables.MostrarVector(VectorUmbralUnicapa, lsbVectorUmbrales,Variables._salidas);
+            Variables.GenerarMatriz(MatrizPesoUnicapa,Variables._entradas,Variables._salidas);
+            Variables.GuardarMatriz(MatrizPesoUnicapa, Variables._entradas, Variables._salidas, "../../../Assets/Matriz de peso unicapa.txt");
+            Variables.Mostrarmatriz(MatrizPesoUnicapa, dgvMatrizPesos,Variables._entradas,Variables._salidas);
+            
+            Variables.GenerarVector(VectorUmbralUnicapa,Variables._salidas);
+            Variables.GuardarVector(VectorUmbralUnicapa, Variables._salidas, "../../../Assets/Vector de umbrales unicapa.txt");
+            Variables.MostrarVector(VectorUmbralUnicapa, lsbVectorUmbrales,Variables._salidas);
         }
-        public void LlenarComboBox()
-        {
-            if (Variables.ValorCbTipo.Equals("Perceptron"))
-            {
+        
+        public void LlenarComboBox(){
+
+            if (Variables.ValorCbTipo.Equals("Perceptron")){
+
                 cbFA_unicapa.Items.Add("Escalon");
-
                 cbAE_unicapa.Items.Add("Regla delta");
-            }
-            else if (Variables.ValorCbTipo.Equals("Adaline"))
-            {
+
+            }else if (Variables.ValorCbTipo.Equals("Adaline")){
+               
                 cbFA_unicapa.Items.Add("Lineal");
-
                 cbAE_unicapa.Items.Add("Regla delta");
-            }
-            else if (Variables.ValorCbTipo.Equals("Backpropagation"))
-            {
+
+            }else if (Variables.ValorCbTipo.Equals("Backpropagation")){
+
                 cbFA_unicapa.Items.Add("Sigmoide");
                 cbFA_unicapa.Items.Add("Tangente");
                 cbFA_unicapa.Items.Add("Hiperbolica");
-
-                
                 cbAE_unicapa.Items.Add("Propagacion inversa");
             }
 
         }
-        private void BtmCargar_Click(object sender, EventArgs e)
-        {
-            variables.BorrarArchivos("Matriz de peso unicapa.txt");
-            variables.BorrarArchivos("Matriz de peso unicapa.txt");
+       
+        private void BtmCargar_Click(object sender, EventArgs e){
+
+            Variables.BorrarArchivos("../../../Assets/Matriz de peso unicapa.txt");
+            Variables.BorrarArchivos("../../../Assets/Matriz de peso unicapa.txt");
 
             lsbVectorUmbrales.Items.Clear();
             dgvMatrizPesos.Rows.Clear();
@@ -76,8 +75,6 @@ namespace Redes_Neuronales
             gbAE_unicapa.Enabled=true;
 
             _Generar();
-            
-            
 
         }
     }
