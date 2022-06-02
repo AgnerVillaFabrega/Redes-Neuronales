@@ -1,28 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Redes_Neuronales
-{
-    public partial class FrmPrincipal : Form
-    {
+namespace Redes_Neuronales {
+    public partial class FrmPrincipal : Form {
         FrmUnicapa unicapa = new FrmUnicapa();
-        public FrmPrincipal()
-        {
+        public FrmPrincipal() {
+
             InitializeComponent();
             cbTipoRed.SelectedIndex = 0;
             cbSeleccionCapa.SelectedIndex = 0;
         }
 
-        private void AbrirFrm2(object frmHija)
-        {
+        private void AbrirFrm2(object frmHija) {
             if (panelContenedorTipo.Controls.Count > 0)
                 panelContenedorTipo.Controls.RemoveAt(0);
             Form frmAux = frmHija as Form;
@@ -33,26 +26,21 @@ namespace Redes_Neuronales
             frmAux.Show();
         }
 
-        private void BtmCargar_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                OpenFileDialog ruta = new OpenFileDialog()
-                {
+        private void BtmCargar_Click_1(object sender, EventArgs e) {
+            try {
+                OpenFileDialog ruta = new OpenFileDialog() {
                     Title = "Seleccione un archivo",
                     Filter = "Arhivo de texto|*.txt"
                 };
 
-                if (ruta.ShowDialog() == DialogResult.OK)
-                {
+                if (ruta.ShowDialog() == DialogResult.OK) {
                     txtRuta.Text = ruta.FileName;
                     StreamReader sr = new StreamReader(ruta.FileName);
                     Variables.Patrones = new List<string[]>();
                     Variables.Entradas = new List<int[]>();
                     Variables.Salidas = new List<int[]>();
                     string linea = sr.ReadLine();
-                    while (linea != null)
-                    {
+                    while (linea != null) {
                         var temp = linea.Split(';');
                         var tempIn = temp[0].Split(' ');
                         var _in = tempIn.Select(x => Convert.ToInt32(x)).ToArray();
@@ -77,42 +65,34 @@ namespace Redes_Neuronales
                     cbTipoRed.Enabled = true;
                 }
             }
-            catch (Exception)
-            {
+            catch (Exception) {
                 txtRuta.Text = "Ruta";
 
                 MessageBox.Show("ERROR");
             }
         }
 
-        private void cbTipoRed_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            if (cbTipoRed.Text.Equals("Perceptron") || cbTipoRed.Text.Equals("Adaline") || cbTipoRed.Text.Equals("Backpropagation"))
-            {
+        private void cbTipoRed_SelectedIndexChanged_1(object sender, EventArgs e) {
+            if (cbTipoRed.Text.Equals("Perceptron") || cbTipoRed.Text.Equals("Adaline") || cbTipoRed.Text.Equals("Backpropagation")) {
                 cbSeleccionCapa.Enabled = true;
                 Variables.ValorCbTipo = cbTipoRed.Text;
             }
-            else
-            {
+            else {
                 cbSeleccionCapa.Enabled = false;
             }
         }
 
-        private void cbSeleccionCapa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbSeleccionCapa.Text.Equals("Unicapa"))
-            {
+        private void cbSeleccionCapa_SelectedIndexChanged(object sender, EventArgs e) {
+            if (cbSeleccionCapa.Text.Equals("Unicapa")) {
                 panelPaso3.Enabled = true;
                 AbrirFrm2(new FrmUnicapa());
             }
-            else if (cbSeleccionCapa.Text.Equals("Multicapa"))
-            {
+            else if (cbSeleccionCapa.Text.Equals("Multicapa")) {
                 panelPaso3.Enabled = true;
                 AbrirFrm2(new FrmMulticapa());
             }
-            else if(cbSeleccionCapa.Text.Equals("Seleccione tipo de capas"))
-            {
-               panelPaso3.Enabled=false;
+            else if (cbSeleccionCapa.Text.Equals("Seleccione tipo de capas")) {
+                panelPaso3.Enabled = false;
                 panelContenedorTipo.Controls.Clear();
             }
         }
