@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -123,6 +123,8 @@ namespace Redes_Neuronales {
 
             if (Variables.numIteraciones > 0) {
 
+                GraficaYdYR.Series.Add("yd").ChartType = SeriesChartType.Line;
+                GraficaYdYR.Series.Add("yR").ChartType = SeriesChartType.Line;
 
 
                 for (int iteraciones = 0; iteraciones < Variables.numIteraciones; iteraciones++) {
@@ -139,6 +141,11 @@ namespace Redes_Neuronales {
                             }
 
                             yR[i] -= VectorUmbralUnicapa[i];
+
+
+                            GraficaYdYR.Series["yd"].Points.AddXY(i, Variables.Salidas[Variables.Entradas.IndexOf(patron)][i]);
+
+                            GraficaYdYR.Series["yR"].Points.AddXY(i, yR[i]);
 
                             if (Variables.ValorCbTipo.ToUpper().Equals("PERCEPTRON")) {
 
@@ -182,10 +189,12 @@ namespace Redes_Neuronales {
 
                 for (int i = 0; i < Eit.Length; i++) {
                     GraficaEi.Series["Eit"].Points.AddXY(i, Eit[i]);
-                    
+                    Task.Delay(3000);
                 }
 
                
+                
+
 
             }
         }
