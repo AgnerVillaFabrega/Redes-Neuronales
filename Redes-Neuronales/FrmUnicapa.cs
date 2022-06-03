@@ -185,6 +185,8 @@ namespace Redes_Neuronales {
                     
                 }
 
+               
+
             }
         }
     }
