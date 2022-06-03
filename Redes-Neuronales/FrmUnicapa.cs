@@ -7,7 +7,7 @@ namespace Redes_Neuronales {
         public double[,] MatrizPesoUnicapa;
         public double[] VectorUmbralUnicapa;
 
-        
+
 
         public FrmUnicapa() {
 
@@ -37,14 +37,12 @@ namespace Redes_Neuronales {
                 cbFA_unicapa.Items.Add("Escalon");
                 cbAE_unicapa.Items.Add("Regla delta");
 
-            }
-            else if (Variables.ValorCbTipo.Equals("Adaline")) {
+            } else if (Variables.ValorCbTipo.Equals("Adaline")) {
 
                 cbFA_unicapa.Items.Add("Lineal");
                 cbAE_unicapa.Items.Add("Regla delta");
 
-            }
-            else if (Variables.ValorCbTipo.Equals("Backpropagation")) {
+            } else if (Variables.ValorCbTipo.Equals("Backpropagation")) {
 
                 cbFA_unicapa.Items.Add("Sigmoide");
                 cbFA_unicapa.Items.Add("Tangente");
@@ -78,7 +76,7 @@ namespace Redes_Neuronales {
              * i = Num Salidas existentes
              * j = Num Entradas existentes
              *
-             * 1. Realizar la funcion Soma Si = E[(Xi * Wji) - Ui]
+             * 1. Realizar la funcion Soma Si = E[(Xj * Wji) - Ui]
              * 2. Comparar resultado con la función de activación.
              *      Perceptron(Escalón)     Yr >= 0 => 1
              *                              Yr <  0 => 0
@@ -116,11 +114,69 @@ namespace Redes_Neuronales {
 
             #endregion
 
-            if (Variables.numIteraciones > 0 ) {
+            double[] yR = new double[Variables._salidas];
+            double[] El = new double[Variables._salidas];
+            double[] Ep = new double[Variables._patrones];
+            double[] Eit = new double[Variables.numIteraciones];
+
+            if (Variables.numIteraciones > 0) {
 
 
 
+                for (int iteraciones = 0; iteraciones < Variables.numIteraciones; iteraciones++) {
 
+                    foreach (var patron in Variables.Entradas) {
+
+
+                        for (int i = 0; i < Variables._salidas; i++) {
+
+                            for (int j = 0; j < Variables._entradas; j++) {
+
+                                yR[i] += patron[j] * MatrizPesoUnicapa[j, i];
+
+                            }
+
+                            yR[i] -= VectorUmbralUnicapa[i];
+
+                            if (Variables.ValorCbTipo.ToUpper().Equals("PERCEPTRON")) {
+
+                                if (yR[i] >= 0) yR[i] = 1;
+                                if (yR[i] < 0) yR[i] = 0;
+                            }
+
+                            El[i] = Variables.Salidas[Variables.Entradas.IndexOf(patron)][i] - yR[i];
+
+                            for (int j = 0; j < Variables._entradas; j++) {
+
+                                MatrizPesoUnicapa[j, i] = MatrizPesoUnicapa[j, i] + Variables.rataAprendizaje * El[i] * patron[j];
+
+                            }
+
+                            VectorUmbralUnicapa[i] = VectorUmbralUnicapa[i] + Variables.rataAprendizaje * El[i];
+
+                            Ep[Variables.Entradas.IndexOf(patron)] += Math.Abs(El[i]);
+
+
+                        }
+
+                        Ep[Variables.Entradas.IndexOf(patron)] /= Variables._salidas;
+
+                        Eit[iteraciones] += Math.Abs(Ep[Variables.Entradas.IndexOf(patron)]);
+
+
+                    }
+
+                    Eit[iteraciones] /= Variables._patrones;
+
+                    if (Eit[iteraciones] <= Variables.errorMaximo) {
+                        iteraciones = Variables.numIteraciones;
+                    }
+
+                    
+                }
+
+
+                //Implementacion de grafica.
             }
         }
     }
