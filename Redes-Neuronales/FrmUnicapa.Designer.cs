@@ -39,6 +39,7 @@
             this.dgvMatrizPesos = new System.Windows.Forms.DataGridView();
             this.gbVector = new System.Windows.Forms.GroupBox();
             this.lsbVectorUmbrales = new System.Windows.Forms.ListBox();
+            this.BtmEntrenar = new System.Windows.Forms.Button();
             this.gbAE_unicapa.SuspendLayout();
             this.gbFA_unicapa.SuspendLayout();
             this.gbMatriz.SuspendLayout();
@@ -49,11 +50,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("JetBrains Mono NL", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.label10.Location = new System.Drawing.Point(93, 39);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(89, 25);
+            this.label10.Size = new System.Drawing.Size(86, 24);
             this.label10.TabIndex = 18;
             this.label10.Text = "Unicapa";
             // 
@@ -61,7 +62,7 @@
             // 
             this.gbAE_unicapa.Controls.Add(this.cbAE_unicapa);
             this.gbAE_unicapa.Enabled = false;
-            this.gbAE_unicapa.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 8.999999F, System.Drawing.FontStyle.Italic);
+            this.gbAE_unicapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Italic);
             this.gbAE_unicapa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.gbAE_unicapa.Location = new System.Drawing.Point(663, 125);
             this.gbAE_unicapa.Name = "gbAE_unicapa";
@@ -74,18 +75,18 @@
             // 
             this.cbAE_unicapa.BackColor = System.Drawing.Color.LightSteelBlue;
             this.cbAE_unicapa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAE_unicapa.Font = new System.Drawing.Font("JetBrains Mono Light", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAE_unicapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbAE_unicapa.FormattingEnabled = true;
             this.cbAE_unicapa.Location = new System.Drawing.Point(58, 27);
             this.cbAE_unicapa.Name = "cbAE_unicapa";
-            this.cbAE_unicapa.Size = new System.Drawing.Size(264, 24);
+            this.cbAE_unicapa.Size = new System.Drawing.Size(264, 23);
             this.cbAE_unicapa.TabIndex = 0;
             // 
             // gbFA_unicapa
             // 
             this.gbFA_unicapa.Controls.Add(this.cbFA_unicapa);
             this.gbFA_unicapa.Enabled = false;
-            this.gbFA_unicapa.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 8.999999F, System.Drawing.FontStyle.Italic);
+            this.gbFA_unicapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Italic);
             this.gbFA_unicapa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.gbFA_unicapa.Location = new System.Drawing.Point(142, 122);
             this.gbFA_unicapa.Name = "gbFA_unicapa";
@@ -98,21 +99,21 @@
             // 
             this.cbFA_unicapa.BackColor = System.Drawing.Color.LightSteelBlue;
             this.cbFA_unicapa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbFA_unicapa.Font = new System.Drawing.Font("JetBrains Mono Light", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFA_unicapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFA_unicapa.FormattingEnabled = true;
             this.cbFA_unicapa.Location = new System.Drawing.Point(58, 27);
             this.cbFA_unicapa.Name = "cbFA_unicapa";
-            this.cbFA_unicapa.Size = new System.Drawing.Size(264, 24);
+            this.cbFA_unicapa.Size = new System.Drawing.Size(264, 23);
             this.cbFA_unicapa.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("JetBrains Mono NL SemiBold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.label1.Location = new System.Drawing.Point(139, 83);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(280, 17);
+            this.label1.Size = new System.Drawing.Size(246, 16);
             this.label1.TabIndex = 22;
             this.label1.Text = "Inicializacion de pesos y umbrales";
             // 
@@ -126,7 +127,7 @@
             this.BtmCargar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(77)))));
             this.BtmCargar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
             this.BtmCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtmCargar.Font = new System.Drawing.Font("JetBrains Mono NL SemiBold", 8.999999F, System.Drawing.FontStyle.Bold);
+            this.BtmCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
             this.BtmCargar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
             this.BtmCargar.Location = new System.Drawing.Point(435, 78);
             this.BtmCargar.Name = "BtmCargar";
@@ -140,7 +141,7 @@
             // 
             this.gbMatriz.Controls.Add(this.dgvMatrizPesos);
             this.gbMatriz.Enabled = false;
-            this.gbMatriz.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 8.999999F, System.Drawing.FontStyle.Italic);
+            this.gbMatriz.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Italic);
             this.gbMatriz.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.gbMatriz.Location = new System.Drawing.Point(142, 232);
             this.gbMatriz.Name = "gbMatriz";
@@ -164,7 +165,7 @@
             // 
             this.gbVector.Controls.Add(this.lsbVectorUmbrales);
             this.gbVector.Enabled = false;
-            this.gbVector.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 8.999999F, System.Drawing.FontStyle.Italic);
+            this.gbVector.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Italic);
             this.gbVector.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.gbVector.Location = new System.Drawing.Point(663, 232);
             this.gbVector.Name = "gbVector";
@@ -179,11 +180,31 @@
             this.lsbVectorUmbrales.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lsbVectorUmbrales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.lsbVectorUmbrales.FormattingEnabled = true;
-            this.lsbVectorUmbrales.ItemHeight = 16;
+            this.lsbVectorUmbrales.ItemHeight = 15;
             this.lsbVectorUmbrales.Location = new System.Drawing.Point(6, 22);
             this.lsbVectorUmbrales.Name = "lsbVectorUmbrales";
-            this.lsbVectorUmbrales.Size = new System.Drawing.Size(355, 208);
+            this.lsbVectorUmbrales.Size = new System.Drawing.Size(355, 195);
             this.lsbVectorUmbrales.TabIndex = 0;
+            // 
+            // BtmEntrenar
+            // 
+            this.BtmEntrenar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtmEntrenar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
+            this.BtmEntrenar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtmEntrenar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
+            this.BtmEntrenar.FlatAppearance.BorderSize = 0;
+            this.BtmEntrenar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(77)))));
+            this.BtmEntrenar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
+            this.BtmEntrenar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtmEntrenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
+            this.BtmEntrenar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+            this.BtmEntrenar.Location = new System.Drawing.Point(498, 516);
+            this.BtmEntrenar.Name = "BtmEntrenar";
+            this.BtmEntrenar.Size = new System.Drawing.Size(154, 54);
+            this.BtmEntrenar.TabIndex = 34;
+            this.BtmEntrenar.Text = "Comenzar Entrenamiento";
+            this.BtmEntrenar.UseVisualStyleBackColor = false;
+            this.BtmEntrenar.Click += new System.EventHandler(this.BtmEntrenar_Click);
             // 
             // FrmUnicapa
             // 
@@ -191,6 +212,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
             this.ClientSize = new System.Drawing.Size(1175, 582);
+            this.Controls.Add(this.BtmEntrenar);
             this.Controls.Add(this.gbVector);
             this.Controls.Add(this.gbMatriz);
             this.Controls.Add(this.BtmCargar);
@@ -225,5 +247,6 @@
         private System.Windows.Forms.DataGridView dgvMatrizPesos;
         private System.Windows.Forms.GroupBox gbVector;
         private System.Windows.Forms.ListBox lsbVectorUmbrales;
+        private System.Windows.Forms.Button BtmEntrenar;
     }
 }

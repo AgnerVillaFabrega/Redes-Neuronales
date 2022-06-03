@@ -53,9 +53,6 @@ namespace Redes_Neuronales {
 
         private void BtmCargar_Click(object sender, EventArgs e) {
 
-            Variables.BorrarArchivos("../../../Assets/Matriz de peso unicapa.txt");
-            Variables.BorrarArchivos("../../../Assets/Matriz de peso unicapa.txt");
-
             lsbVectorUmbrales.Items.Clear();
             dgvMatrizPesos.Rows.Clear();
             cbAE_unicapa.Items.Clear();
@@ -69,6 +66,37 @@ namespace Redes_Neuronales {
 
             _Generar();
 
+        }
+
+        private void BtmEntrenar_Click(object sender, EventArgs e) {
+
+            /*
+             * i = Num Salidas existentes
+             * j = Num Entradas existentes
+             *
+             * 1. Realizar la funcion Soma Si = E[(Xi * Wji) - Ui]
+             * 2. Comparar resultado con la función de activación.
+             *      Perceptron(Escalón)     Yr >= 0 => 1
+             *                              Yr <  0 => 0
+             *      
+             *      Adaline(Lineal)         Y = X
+             *      
+             * 3. Calcular error lineal Eli = Yd - Yr
+             * 4. Modificar matriz de peso.
+             *      Wji (Nuevo) = Wji (Viejo) + RtApr * Eli * Xj
+             *      
+             * 5. Modificar Umbral
+             *      
+             *      Xo Siempre es igual a 1.
+             *      
+             *      Ui (Nuevo) = Ui (Viejo) + RtApr * Eli * Xo
+             *      
+             * 6. Calcular el error por patrón
+             *      
+             *      Ep 
+             *      
+             *      
+             */
         }
     }
 }
