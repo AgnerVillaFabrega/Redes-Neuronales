@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Threading;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Redes_Neuronales {
     public partial class FrmUnicapa : Form {
@@ -175,8 +177,14 @@ namespace Redes_Neuronales {
                     
                 }
 
+                
+                Grafica1.Series.Add("Eit").ChartType = SeriesChartType.Line;
 
-                //Implementacion de grafica.
+                for (int i = 0; i < Eit.Length; i++) {
+                    Grafica1.Series["Eit"].Points.AddXY(i, Eit[i]);
+                    
+                }
+
             }
         }
     }
