@@ -83,6 +83,9 @@ namespace Redes_Neuronales {
         }
 
         private void cbSeleccionCapa_SelectedIndexChanged(object sender, EventArgs e) {
+
+            
+
             if (cbSeleccionCapa.Text.Equals("Unicapa")) {
                 panelPaso3.Enabled = true;
                 AbrirFrm2(new FrmUnicapa());
@@ -95,6 +98,19 @@ namespace Redes_Neuronales {
                 panelPaso3.Enabled = false;
                 panelContenedorTipo.Controls.Clear();
             }
+        }
+        
+
+        private void nudNumeroIteraciones_ValueChanged(object sender, EventArgs e) {
+            Variables.numIteraciones = (int)nudNumeroIteraciones.Value;
+        }
+
+        private void nudRataAprendizaje_ValueChanged(object sender, EventArgs e) {
+            Variables.rataAprendizaje = (double)nudRataAprendizaje.Value;
+        }
+
+        private void nudErrorMaximo_ValueChanged(object sender, EventArgs e) {
+            Variables.errorMaximo = (double)nudErrorMaximo.Value;
         }
     }
 }

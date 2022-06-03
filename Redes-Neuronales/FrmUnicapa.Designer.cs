@@ -52,7 +52,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
-            this.label10.Location = new System.Drawing.Point(93, 39);
+            this.label10.Location = new System.Drawing.Point(138, 26);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(86, 24);
             this.label10.TabIndex = 18;
@@ -111,7 +111,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
-            this.label1.Location = new System.Drawing.Point(139, 83);
+            this.label1.Location = new System.Drawing.Point(139, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(246, 16);
             this.label1.TabIndex = 22;
@@ -129,7 +129,7 @@
             this.BtmCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtmCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
             this.BtmCargar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-            this.BtmCargar.Location = new System.Drawing.Point(435, 78);
+            this.BtmCargar.Location = new System.Drawing.Point(433, 62);
             this.BtmCargar.Name = "BtmCargar";
             this.BtmCargar.Size = new System.Drawing.Size(93, 27);
             this.BtmCargar.TabIndex = 31;
@@ -198,7 +198,7 @@
             this.BtmEntrenar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtmEntrenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
             this.BtmEntrenar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-            this.BtmEntrenar.Location = new System.Drawing.Point(498, 516);
+            this.BtmEntrenar.Location = new System.Drawing.Point(508, 494);
             this.BtmEntrenar.Name = "BtmEntrenar";
             this.BtmEntrenar.Size = new System.Drawing.Size(154, 54);
             this.BtmEntrenar.TabIndex = 34;

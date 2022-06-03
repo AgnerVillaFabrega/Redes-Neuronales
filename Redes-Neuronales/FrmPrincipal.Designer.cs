@@ -31,15 +31,15 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelcontenedor = new System.Windows.Forms.Panel();
-            this.panelContenedorTipo = new System.Windows.Forms.Panel();
             this.panelPaso3 = new System.Windows.Forms.Panel();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nudRataAprendizaje = new System.Windows.Forms.NumericUpDown();
+            this.nudErrorMaximo = new System.Windows.Forms.NumericUpDown();
+            this.nudNumeroIteraciones = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panelContenedorTipo = new System.Windows.Forms.Panel();
             this.panelPaso1 = new System.Windows.Forms.Panel();
             this.cbTipoRed = new System.Windows.Forms.ComboBox();
             this.cbSeleccionCapa = new System.Windows.Forms.ComboBox();
@@ -55,9 +55,9 @@
             this.panel3.SuspendLayout();
             this.panelcontenedor.SuspendLayout();
             this.panelPaso3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRataAprendizaje)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudErrorMaximo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumeroIteraciones)).BeginInit();
             this.panelPaso1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
@@ -90,26 +90,16 @@
             this.panelcontenedor.Controls.Add(this.panelPaso3);
             this.panelcontenedor.Controls.Add(this.panelContenedorTipo);
             this.panelcontenedor.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelcontenedor.Location = new System.Drawing.Point(0, 138);
+            this.panelcontenedor.Location = new System.Drawing.Point(0, 152);
             this.panelcontenedor.Name = "panelcontenedor";
-            this.panelcontenedor.Size = new System.Drawing.Size(1175, 682);
+            this.panelcontenedor.Size = new System.Drawing.Size(1175, 668);
             this.panelcontenedor.TabIndex = 1;
-            // 
-            // panelContenedorTipo
-            // 
-            this.panelContenedorTipo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedorTipo.Location = new System.Drawing.Point(0, 0);
-            this.panelContenedorTipo.Name = "panelContenedorTipo";
-            this.panelContenedorTipo.Size = new System.Drawing.Size(1175, 682);
-            this.panelContenedorTipo.TabIndex = 1;
             // 
             // panelPaso3
             // 
-            this.panelPaso3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelPaso3.Controls.Add(this.numericUpDown3);
-            this.panelPaso3.Controls.Add(this.numericUpDown2);
-            this.panelPaso3.Controls.Add(this.numericUpDown1);
+            this.panelPaso3.Controls.Add(this.nudRataAprendizaje);
+            this.panelPaso3.Controls.Add(this.nudErrorMaximo);
+            this.panelPaso3.Controls.Add(this.nudNumeroIteraciones);
             this.panelPaso3.Controls.Add(this.label7);
             this.panelPaso3.Controls.Add(this.label6);
             this.panelPaso3.Controls.Add(this.label5);
@@ -120,82 +110,85 @@
             this.panelPaso3.Size = new System.Drawing.Size(1175, 100);
             this.panelPaso3.TabIndex = 0;
             // 
-            // numericUpDown3
+            // nudRataAprendizaje
             // 
-            this.numericUpDown3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.numericUpDown3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
-            this.numericUpDown3.DecimalPlaces = 3;
-            this.numericUpDown3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
-            this.numericUpDown3.Increment = new decimal(new int[] {
+            this.nudRataAprendizaje.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.nudRataAprendizaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
+            this.nudRataAprendizaje.DecimalPlaces = 3;
+            this.nudRataAprendizaje.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
+            this.nudRataAprendizaje.Increment = new decimal(new int[] {
             1,
             0,
             0,
             196608});
-            this.numericUpDown3.Location = new System.Drawing.Point(521, 52);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
+            this.nudRataAprendizaje.Location = new System.Drawing.Point(521, 52);
+            this.nudRataAprendizaje.Maximum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown3.Minimum = new decimal(new int[] {
+            this.nudRataAprendizaje.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             196608});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(80, 20);
-            this.numericUpDown3.TabIndex = 9;
-            this.numericUpDown3.Value = new decimal(new int[] {
+            this.nudRataAprendizaje.Name = "nudRataAprendizaje";
+            this.nudRataAprendizaje.Size = new System.Drawing.Size(80, 20);
+            this.nudRataAprendizaje.TabIndex = 9;
+            this.nudRataAprendizaje.Value = new decimal(new int[] {
             1,
             0,
             0,
             196608});
+            this.nudRataAprendizaje.ValueChanged += new System.EventHandler(this.nudRataAprendizaje_ValueChanged);
             // 
-            // numericUpDown2
+            // nudErrorMaximo
             // 
-            this.numericUpDown2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.numericUpDown2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
-            this.numericUpDown2.DecimalPlaces = 3;
-            this.numericUpDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
-            this.numericUpDown2.Increment = new decimal(new int[] {
+            this.nudErrorMaximo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.nudErrorMaximo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
+            this.nudErrorMaximo.DecimalPlaces = 3;
+            this.nudErrorMaximo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
+            this.nudErrorMaximo.Increment = new decimal(new int[] {
             1,
             0,
             0,
             196608});
-            this.numericUpDown2.Location = new System.Drawing.Point(941, 52);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.nudErrorMaximo.Location = new System.Drawing.Point(941, 52);
+            this.nudErrorMaximo.Maximum = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(80, 20);
-            this.numericUpDown2.TabIndex = 8;
+            this.nudErrorMaximo.Name = "nudErrorMaximo";
+            this.nudErrorMaximo.Size = new System.Drawing.Size(80, 20);
+            this.nudErrorMaximo.TabIndex = 8;
+            this.nudErrorMaximo.ValueChanged += new System.EventHandler(this.nudErrorMaximo_ValueChanged);
             // 
-            // numericUpDown1
+            // nudNumeroIteraciones
             // 
-            this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
-            this.numericUpDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
-            this.numericUpDown1.Location = new System.Drawing.Point(107, 52);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.nudNumeroIteraciones.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.nudNumeroIteraciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
+            this.nudNumeroIteraciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
+            this.nudNumeroIteraciones.Location = new System.Drawing.Point(107, 52);
+            this.nudNumeroIteraciones.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.nudNumeroIteraciones.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(80, 20);
-            this.numericUpDown1.TabIndex = 7;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.nudNumeroIteraciones.Name = "nudNumeroIteraciones";
+            this.nudNumeroIteraciones.Size = new System.Drawing.Size(80, 20);
+            this.nudNumeroIteraciones.TabIndex = 7;
+            this.nudNumeroIteraciones.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.nudNumeroIteraciones.ValueChanged += new System.EventHandler(this.nudNumeroIteraciones_ValueChanged);
             // 
             // label7
             // 
@@ -242,6 +235,13 @@
             this.panel6.Size = new System.Drawing.Size(1145, 4);
             this.panel6.TabIndex = 0;
             // 
+            // panelContenedorTipo
+            // 
+            this.panelContenedorTipo.Location = new System.Drawing.Point(0, 100);
+            this.panelContenedorTipo.Name = "panelContenedorTipo";
+            this.panelContenedorTipo.Size = new System.Drawing.Size(1175, 568);
+            this.panelContenedorTipo.TabIndex = 1;
+            // 
             // panelPaso1
             // 
             this.panelPaso1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(83)))), ((int)(((byte)(102)))));
@@ -253,7 +253,7 @@
             this.panelPaso1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPaso1.Location = new System.Drawing.Point(0, 50);
             this.panelPaso1.Name = "panelPaso1";
-            this.panelPaso1.Size = new System.Drawing.Size(1175, 88);
+            this.panelPaso1.Size = new System.Drawing.Size(1175, 102);
             this.panelPaso1.TabIndex = 2;
             // 
             // cbTipoRed
@@ -270,7 +270,7 @@
             "Perceptron",
             "Adaline",
             "Backpropagation"});
-            this.cbTipoRed.Location = new System.Drawing.Point(941, 12);
+            this.cbTipoRed.Location = new System.Drawing.Point(941, 19);
             this.cbTipoRed.Name = "cbTipoRed";
             this.cbTipoRed.Size = new System.Drawing.Size(210, 23);
             this.cbTipoRed.TabIndex = 25;
@@ -289,7 +289,7 @@
             "Seleccione tipo de capas",
             "Unicapa",
             "Multicapa"});
-            this.cbSeleccionCapa.Location = new System.Drawing.Point(941, 51);
+            this.cbSeleccionCapa.Location = new System.Drawing.Point(941, 58);
             this.cbSeleccionCapa.Name = "cbSeleccionCapa";
             this.cbSeleccionCapa.Size = new System.Drawing.Size(210, 23);
             this.cbSeleccionCapa.TabIndex = 24;
@@ -300,7 +300,7 @@
             this.txtRuta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtRuta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(83)))), ((int)(((byte)(102)))));
             this.txtRuta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-            this.txtRuta.Location = new System.Drawing.Point(14, 56);
+            this.txtRuta.Location = new System.Drawing.Point(14, 63);
             this.txtRuta.Name = "txtRuta";
             this.txtRuta.ReadOnly = true;
             this.txtRuta.Size = new System.Drawing.Size(207, 20);
@@ -317,7 +317,7 @@
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.lb_entradas);
             this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Location = new System.Drawing.Point(241, 2);
+            this.groupBox4.Location = new System.Drawing.Point(241, 9);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(679, 74);
             this.groupBox4.TabIndex = 22;
@@ -400,7 +400,7 @@
             this.BtmCargar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
             this.BtmCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
             this.BtmCargar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-            this.BtmCargar.Location = new System.Drawing.Point(14, 12);
+            this.BtmCargar.Location = new System.Drawing.Point(14, 19);
             this.BtmCargar.Name = "BtmCargar";
             this.BtmCargar.Size = new System.Drawing.Size(207, 36);
             this.BtmCargar.TabIndex = 21;
@@ -422,9 +422,9 @@
             this.panelcontenedor.ResumeLayout(false);
             this.panelPaso3.ResumeLayout(false);
             this.panelPaso3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRataAprendizaje)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudErrorMaximo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumeroIteraciones)).EndInit();
             this.panelPaso1.ResumeLayout(false);
             this.panelPaso1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -456,9 +456,9 @@
         private System.Windows.Forms.Panel panelContenedorTipo;
         private System.Windows.Forms.Panel panelPaso3;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudRataAprendizaje;
+        private System.Windows.Forms.NumericUpDown nudErrorMaximo;
+        private System.Windows.Forms.NumericUpDown nudNumeroIteraciones;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

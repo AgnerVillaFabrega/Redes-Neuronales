@@ -9,6 +9,10 @@ namespace Redes_Neuronales {
         public static List<int[]> Entradas = new List<int[]>();
         public static List<int[]> Salidas = new List<int[]>();
 
+        public static int numIteraciones;
+        public static double rataAprendizaje;
+        public static double errorMaximo;
+
         public static int _entradas { get; set; }
         public static int _salidas { get; set; }
         public static int _patrones { get; set; }
