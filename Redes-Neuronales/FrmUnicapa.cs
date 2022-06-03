@@ -178,16 +178,26 @@ namespace Redes_Neuronales {
                 }
 
                 
-                Grafica1.Series.Add("Eit").ChartType = SeriesChartType.Line;
+                GraficaEi.Series.Add("Eit").ChartType = SeriesChartType.Line;
 
                 for (int i = 0; i < Eit.Length; i++) {
-                    Grafica1.Series["Eit"].Points.AddXY(i, Eit[i]);
+                    GraficaEi.Series["Eit"].Points.AddXY(i, Eit[i]);
                     
                 }
 
                
 
             }
+        }
+
+        private void cbFA_unicapa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbAE_unicapa.Enabled = true;
+        }
+
+        private void cbAE_unicapa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BtmEntrenar.Enabled = true;
         }
     }
 }

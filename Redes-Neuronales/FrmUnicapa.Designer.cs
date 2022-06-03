@@ -30,6 +30,8 @@
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.label10 = new System.Windows.Forms.Label();
             this.gbAE_unicapa = new System.Windows.Forms.GroupBox();
             this.cbAE_unicapa = new System.Windows.Forms.ComboBox();
@@ -38,16 +40,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BtmCargar = new System.Windows.Forms.Button();
             this.gbMatriz = new System.Windows.Forms.GroupBox();
+            this.GraficaEi = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.gbVector = new System.Windows.Forms.GroupBox();
             this.BtmEntrenar = new System.Windows.Forms.Button();
-            this.Grafica1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lsbVectorUmbrales = new System.Windows.Forms.ListBox();
             this.dgvMatrizPesos = new System.Windows.Forms.DataGridView();
+            this.GraficaYdYR = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.gbAE_unicapa.SuspendLayout();
             this.gbFA_unicapa.SuspendLayout();
             this.gbMatriz.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Grafica1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GraficaEi)).BeginInit();
+            this.gbVector.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatrizPesos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GraficaYdYR)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -69,9 +74,9 @@
             this.gbAE_unicapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Italic);
             this.gbAE_unicapa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.gbAE_unicapa.Location = new System.Drawing.Point(884, 154);
-            this.gbAE_unicapa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbAE_unicapa.Margin = new System.Windows.Forms.Padding(4);
             this.gbAE_unicapa.Name = "gbAE_unicapa";
-            this.gbAE_unicapa.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbAE_unicapa.Padding = new System.Windows.Forms.Padding(4);
             this.gbAE_unicapa.Size = new System.Drawing.Size(489, 81);
             this.gbAE_unicapa.TabIndex = 21;
             this.gbAE_unicapa.TabStop = false;
@@ -81,13 +86,15 @@
             // 
             this.cbAE_unicapa.BackColor = System.Drawing.Color.LightSteelBlue;
             this.cbAE_unicapa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAE_unicapa.Enabled = false;
             this.cbAE_unicapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbAE_unicapa.FormattingEnabled = true;
             this.cbAE_unicapa.Location = new System.Drawing.Point(77, 33);
-            this.cbAE_unicapa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbAE_unicapa.Margin = new System.Windows.Forms.Padding(4);
             this.cbAE_unicapa.Name = "cbAE_unicapa";
             this.cbAE_unicapa.Size = new System.Drawing.Size(351, 26);
             this.cbAE_unicapa.TabIndex = 0;
+            this.cbAE_unicapa.SelectedIndexChanged += new System.EventHandler(this.cbAE_unicapa_SelectedIndexChanged);
             // 
             // gbFA_unicapa
             // 
@@ -96,9 +103,9 @@
             this.gbFA_unicapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Italic);
             this.gbFA_unicapa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.gbFA_unicapa.Location = new System.Drawing.Point(189, 150);
-            this.gbFA_unicapa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbFA_unicapa.Margin = new System.Windows.Forms.Padding(4);
             this.gbFA_unicapa.Name = "gbFA_unicapa";
-            this.gbFA_unicapa.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbFA_unicapa.Padding = new System.Windows.Forms.Padding(4);
             this.gbFA_unicapa.Size = new System.Drawing.Size(489, 90);
             this.gbFA_unicapa.TabIndex = 20;
             this.gbFA_unicapa.TabStop = false;
@@ -111,10 +118,11 @@
             this.cbFA_unicapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFA_unicapa.FormattingEnabled = true;
             this.cbFA_unicapa.Location = new System.Drawing.Point(77, 33);
-            this.cbFA_unicapa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbFA_unicapa.Margin = new System.Windows.Forms.Padding(4);
             this.cbFA_unicapa.Name = "cbFA_unicapa";
             this.cbFA_unicapa.Size = new System.Drawing.Size(351, 26);
             this.cbFA_unicapa.TabIndex = 0;
+            this.cbFA_unicapa.SelectedIndexChanged += new System.EventHandler(this.cbFA_unicapa_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -141,7 +149,7 @@
             this.BtmCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
             this.BtmCargar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
             this.BtmCargar.Location = new System.Drawing.Point(577, 76);
-            this.BtmCargar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtmCargar.Margin = new System.Windows.Forms.Padding(4);
             this.BtmCargar.Name = "BtmCargar";
             this.BtmCargar.Size = new System.Drawing.Size(124, 33);
             this.BtmCargar.TabIndex = 31;
@@ -151,38 +159,53 @@
             // 
             // gbMatriz
             // 
-            this.gbMatriz.Controls.Add(this.Grafica1);
+            this.gbMatriz.Controls.Add(this.GraficaEi);
             this.gbMatriz.Enabled = false;
             this.gbMatriz.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Italic);
             this.gbMatriz.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.gbMatriz.Location = new System.Drawing.Point(189, 286);
-            this.gbMatriz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbMatriz.Margin = new System.Windows.Forms.Padding(4);
             this.gbMatriz.Name = "gbMatriz";
-            this.gbMatriz.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbMatriz.Padding = new System.Windows.Forms.Padding(4);
             this.gbMatriz.Size = new System.Drawing.Size(489, 295);
             this.gbMatriz.TabIndex = 32;
             this.gbMatriz.TabStop = false;
-            this.gbMatriz.Text = "Matriz de pesos";
+            this.gbMatriz.Text = "Grafica de error de iteracion";
+            // 
+            // GraficaEi
+            // 
+            this.GraficaEi.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.GraficaEi.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.GraficaEi.Legends.Add(legend1);
+            this.GraficaEi.Location = new System.Drawing.Point(7, 24);
+            this.GraficaEi.Name = "GraficaEi";
+            this.GraficaEi.Size = new System.Drawing.Size(475, 264);
+            this.GraficaEi.TabIndex = 29;
+            this.GraficaEi.Text = "chart1";
             // 
             // gbVector
             // 
+            this.gbVector.Controls.Add(this.GraficaYdYR);
             this.gbVector.Enabled = false;
             this.gbVector.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Italic);
             this.gbVector.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.gbVector.Location = new System.Drawing.Point(884, 286);
-            this.gbVector.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbVector.Margin = new System.Windows.Forms.Padding(4);
             this.gbVector.Name = "gbVector";
-            this.gbVector.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbVector.Padding = new System.Windows.Forms.Padding(4);
             this.gbVector.Size = new System.Drawing.Size(489, 295);
             this.gbVector.TabIndex = 33;
             this.gbVector.TabStop = false;
-            this.gbVector.Text = "Vector de umbrales";
+            this.gbVector.Text = "Grafica YD vs YR";
             // 
             // BtmEntrenar
             // 
             this.BtmEntrenar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtmEntrenar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.BtmEntrenar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtmEntrenar.Enabled = false;
             this.BtmEntrenar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
             this.BtmEntrenar.FlatAppearance.BorderSize = 0;
             this.BtmEntrenar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(77)))));
@@ -190,27 +213,15 @@
             this.BtmEntrenar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtmEntrenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
             this.BtmEntrenar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+            this.BtmEntrenar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtmEntrenar.Location = new System.Drawing.Point(677, 608);
-            this.BtmEntrenar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtmEntrenar.Margin = new System.Windows.Forms.Padding(4);
             this.BtmEntrenar.Name = "BtmEntrenar";
             this.BtmEntrenar.Size = new System.Drawing.Size(205, 66);
             this.BtmEntrenar.TabIndex = 34;
             this.BtmEntrenar.Text = "Comenzar Entrenamiento";
             this.BtmEntrenar.UseVisualStyleBackColor = false;
             this.BtmEntrenar.Click += new System.EventHandler(this.BtmEntrenar_Click);
-            // 
-            // Grafica1
-            // 
-            this.Grafica1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.Grafica1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.Grafica1.Legends.Add(legend1);
-            this.Grafica1.Location = new System.Drawing.Point(7, 24);
-            this.Grafica1.Name = "Grafica1";
-            this.Grafica1.Size = new System.Drawing.Size(475, 264);
-            this.Grafica1.TabIndex = 29;
-            this.Grafica1.Text = "chart1";
             // 
             // lsbVectorUmbrales
             // 
@@ -224,6 +235,7 @@
             this.lsbVectorUmbrales.Name = "lsbVectorUmbrales";
             this.lsbVectorUmbrales.Size = new System.Drawing.Size(126, 48);
             this.lsbVectorUmbrales.TabIndex = 0;
+            this.lsbVectorUmbrales.Visible = false;
             // 
             // dgvMatrizPesos
             // 
@@ -237,6 +249,20 @@
             this.dgvMatrizPesos.RowHeadersWidth = 51;
             this.dgvMatrizPesos.Size = new System.Drawing.Size(111, 76);
             this.dgvMatrizPesos.TabIndex = 28;
+            this.dgvMatrizPesos.Visible = false;
+            // 
+            // GraficaYdYR
+            // 
+            this.GraficaYdYR.BackColor = System.Drawing.Color.Transparent;
+            chartArea2.Name = "ChartArea1";
+            this.GraficaYdYR.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.GraficaYdYR.Legends.Add(legend2);
+            this.GraficaYdYR.Location = new System.Drawing.Point(7, 24);
+            this.GraficaYdYR.Name = "GraficaYdYR";
+            this.GraficaYdYR.Size = new System.Drawing.Size(475, 264);
+            this.GraficaYdYR.TabIndex = 30;
+            this.GraficaYdYR.Text = "chart1";
             // 
             // FrmUnicapa
             // 
@@ -261,8 +287,10 @@
             this.gbAE_unicapa.ResumeLayout(false);
             this.gbFA_unicapa.ResumeLayout(false);
             this.gbMatriz.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Grafica1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GraficaEi)).EndInit();
+            this.gbVector.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatrizPesos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GraficaYdYR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,8 +308,9 @@
         private System.Windows.Forms.GroupBox gbMatriz;
         private System.Windows.Forms.GroupBox gbVector;
         private System.Windows.Forms.Button BtmEntrenar;
-        private System.Windows.Forms.DataVisualization.Charting.Chart Grafica1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart GraficaEi;
         private System.Windows.Forms.ListBox lsbVectorUmbrales;
         private System.Windows.Forms.DataGridView dgvMatrizPesos;
+        private System.Windows.Forms.DataVisualization.Charting.Chart GraficaYdYR;
     }
 }
