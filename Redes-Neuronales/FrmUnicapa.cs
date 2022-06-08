@@ -10,12 +10,10 @@ namespace Redes_Neuronales {
         public double[] VectorUmbralUnicapa;
 
 
-
         public FrmUnicapa() {
 
             InitializeComponent();
-            BtmCargar.Enabled = true;
-
+            BtmInicializar.Enabled = true;
         }
 
         public void _Generar() {
@@ -34,17 +32,21 @@ namespace Redes_Neuronales {
 
         public void LlenarComboBox() {
 
+
+
             if (Variables.ValorCbTipo.Equals("Perceptron")) {
 
                 cbFA_unicapa.Items.Add("Escalon");
                 cbAE_unicapa.Items.Add("Regla delta");
 
-            } else if (Variables.ValorCbTipo.Equals("Adaline")) {
+            }
+            else if (Variables.ValorCbTipo.Equals("Adaline")) {
 
                 cbFA_unicapa.Items.Add("Lineal");
                 cbAE_unicapa.Items.Add("Regla delta");
 
-            } else if (Variables.ValorCbTipo.Equals("Backpropagation")) {
+            }
+            else if (Variables.ValorCbTipo.Equals("Backpropagation")) {
 
                 cbFA_unicapa.Items.Add("Sigmoide");
                 cbFA_unicapa.Items.Add("Tangente");
@@ -54,7 +56,25 @@ namespace Redes_Neuronales {
 
         }
 
-        private void BtmCargar_Click(object sender, EventArgs e) {
+        private void BtmInicializar_Click(object sender, EventArgs e) {
+
+            GraficaEi.Series.Clear();
+            GraficaYdYR.Series.Clear();
+
+            MatrizPesoUnicapa = new double[Variables._entradas, Variables._salidas];
+            VectorUmbralUnicapa = new double[Variables._salidas];
+
+            DialogResult resultado = MessageBox.Show("¿Desea seguir entrenado con pesos y umbrales anteriores?", "", MessageBoxButtons.YesNoCancel);
+
+            if (resultado == DialogResult.Yes ) {
+
+                Variables.CargarMatrizExistente(MatrizPesoUnicapa, Variables._entradas, Variables._salidas, "../../../Assets/Matriz de peso unicapa.txt");
+                Variables.CargarVectorExistente(VectorUmbralUnicapa, Variables._salidas, "../../../Assets/Vector de umbrales unicapa.txt");
+
+            }else if (resultado == DialogResult.No) {
+
+                _Generar();
+            }
 
             lsbVectorUmbrales.Items.Clear();
             dgvMatrizPesos.Rows.Clear();
@@ -66,12 +86,12 @@ namespace Redes_Neuronales {
             gbVector.Enabled = true;
             gbFA_unicapa.Enabled = true;
             gbAE_unicapa.Enabled = true;
-
-            _Generar();
-
         }
 
-        private void BtmEntrenar_Click(object sender, EventArgs e) {
+        private async void BtmEntrenar_Click(object sender, EventArgs e) {
+
+            GraficaEi.Series.Clear();
+            GraficaYdYR.Series.Clear();
 
             #region Algoritmo Entrenamiento
             /*
@@ -120,17 +140,26 @@ namespace Redes_Neuronales {
             double[] El = new double[Variables._salidas];
             double[] Ep = new double[Variables._patrones];
             double[] Eit = new double[Variables.numIteraciones];
+            int contador = 0;
+            int cont;
+           
 
             if (Variables.numIteraciones > 0) {
 
                 GraficaYdYR.Series.Add("yd").ChartType = SeriesChartType.Line;
                 GraficaYdYR.Series.Add("yR").ChartType = SeriesChartType.Line;
 
+                foreach (var patrones in Variables.Entradas) {
+
+                    GraficaYdYR.Series["yd"].Points.AddXY(contador + patrones[0], contador + patrones[1]);
+                    contador++;
+                }
 
                 for (int iteraciones = 0; iteraciones < Variables.numIteraciones; iteraciones++) {
+                    cont = 0;
+                    GraficaYdYR.Series["yR"].Points.Clear();
 
                     foreach (var patron in Variables.Entradas) {
-
 
                         for (int i = 0; i < Variables._salidas; i++) {
 
@@ -142,10 +171,9 @@ namespace Redes_Neuronales {
 
                             yR[i] -= VectorUmbralUnicapa[i];
 
+                            GraficaYdYR.Series["yR"].Points.AddXY(cont, yR[i]);
 
-                            GraficaYdYR.Series["yd"].Points.AddXY(i, Variables.Salidas[Variables.Entradas.IndexOf(patron)][i]);
-
-                            GraficaYdYR.Series["yR"].Points.AddXY(i, yR[i]);
+                            await Task.Delay(100);
 
                             if (Variables.ValorCbTipo.ToUpper().Equals("PERCEPTRON")) {
 
@@ -165,13 +193,12 @@ namespace Redes_Neuronales {
 
                             Ep[Variables.Entradas.IndexOf(patron)] += Math.Abs(El[i]);
 
-
+                            cont++;
                         }
 
                         Ep[Variables.Entradas.IndexOf(patron)] /= Variables._salidas;
 
                         Eit[iteraciones] += Math.Abs(Ep[Variables.Entradas.IndexOf(patron)]);
-
 
                     }
 
@@ -181,32 +208,28 @@ namespace Redes_Neuronales {
                         iteraciones = Variables.numIteraciones;
                     }
 
-                    
                 }
 
-                
                 GraficaEi.Series.Add("Eit").ChartType = SeriesChartType.Line;
 
                 for (int i = 0; i < Eit.Length; i++) {
                     GraficaEi.Series["Eit"].Points.AddXY(i, Eit[i]);
-                    Task.Delay(3000);
+                    await Task.Delay(100);
                 }
-
-               
-                
-
 
             }
         }
 
-        private void cbFA_unicapa_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        private void cbFA_unicapa_SelectedIndexChanged(object sender, EventArgs e) {
             cbAE_unicapa.Enabled = true;
         }
 
-        private void cbAE_unicapa_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        private void cbAE_unicapa_SelectedIndexChanged(object sender, EventArgs e) {
             BtmEntrenar.Enabled = true;
+        }
+
+        private void FrmUnicapa_Load(object sender, EventArgs e) {
+
         }
     }
 }

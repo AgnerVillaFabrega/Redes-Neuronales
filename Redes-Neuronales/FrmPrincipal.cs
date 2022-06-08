@@ -8,6 +8,8 @@ using System.Windows.Forms;
 namespace Redes_Neuronales {
     public partial class FrmPrincipal : Form {
         FrmUnicapa unicapa = new FrmUnicapa();
+        OpenFileDialog ruta = new OpenFileDialog();
+
         public FrmPrincipal() {
 
             InitializeComponent();
@@ -28,10 +30,10 @@ namespace Redes_Neuronales {
 
         private void BtmCargar_Click_1(object sender, EventArgs e) {
             try {
-                OpenFileDialog ruta = new OpenFileDialog() {
-                    Title = "Seleccione un archivo",
-                    Filter = "Arhivo de texto|*.txt"
-                };
+
+                ruta.Title = "Seleccione un archivo";
+                ruta.Filter = "Arhivo de texto|*.txt";
+                
 
                 if (ruta.ShowDialog() == DialogResult.OK) {
                     txtRuta.Text = ruta.FileName;
@@ -89,6 +91,7 @@ namespace Redes_Neuronales {
             if (cbSeleccionCapa.Text.Equals("Unicapa")) {
                 panelPaso3.Enabled = true;
                 AbrirFrm2(new FrmUnicapa());
+                
             }
             else if (cbSeleccionCapa.Text.Equals("Multicapa")) {
                 panelPaso3.Enabled = true;
@@ -99,7 +102,6 @@ namespace Redes_Neuronales {
                 panelContenedorTipo.Controls.Clear();
             }
         }
-        
 
         private void nudNumeroIteraciones_ValueChanged(object sender, EventArgs e) {
             Variables.numIteraciones = (int)nudNumeroIteraciones.Value;

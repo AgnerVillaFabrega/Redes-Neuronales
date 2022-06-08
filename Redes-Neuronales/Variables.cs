@@ -67,9 +67,19 @@ namespace Redes_Neuronales {
                 listBox.Items.Add(VectorUmbral[c]);
             }
         }
+        public static void CargarVectorExistente(double[] VectorUmbral, int columnas, String path) {
 
+            StreamReader textReader = new StreamReader(path);
+            string[] linea = textReader.ReadLine().Split(';');
+
+            for (int x = 0; x < columnas; x++) {
+                VectorUmbral[x] = double.Parse(linea[x]);
+            }
+            textReader.Close();
+        }
 
         public static void GenerarMatriz(double[,] MatrizPeso, int filas, int columnas) {
+
             for (int i = 0; i < filas; i++) {
                 for (int j = 0; j < columnas; j++) {
                     MatrizPeso[i, j] = Math.Round(NumerosAleatorios(), 6);
@@ -106,6 +116,32 @@ namespace Redes_Neuronales {
                     dataGridView.Rows[f].Cells[c].Value = matrizPeso[f, c].ToString();
                 }
             }
+        }
+        public static void CargarMatrizExistente(double[,] MatrizPeso, int filas, int columnas, String path) {
+
+            StreamReader textReader = new StreamReader(path);
+            string linea;
+
+            while (!textReader.EndOfStream) {
+
+                for (int x = 0; x < filas; x++) {
+
+                    linea = textReader.ReadLine();
+
+                    if (linea != null) {
+
+                        string[] fila = linea.Split(';');
+
+                        for (int y = 0; y < columnas; y++) {
+
+                            MatrizPeso[x, y] = double.Parse(fila[y]);
+
+                        }
+                    }
+                }
+
+            }
+            textReader.Close();
         }
 
         #region Funcion limpiar campos
