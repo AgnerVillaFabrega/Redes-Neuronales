@@ -198,9 +198,9 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.label7.Location = new System.Drawing.Point(914, 21);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(160, 15);
+            this.label7.Size = new System.Drawing.Size(159, 15);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Error maximo permirido";
+            this.label7.Text = "Error maximo permitido";
             // 
             // label6
             // 
@@ -328,7 +328,7 @@
             this.lb_patrones.AutoSize = true;
             this.lb_patrones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_patrones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-            this.lb_patrones.Location = new System.Drawing.Point(569, 45);
+            this.lb_patrones.Location = new System.Drawing.Point(569, 42);
             this.lb_patrones.Name = "lb_patrones";
             this.lb_patrones.Size = new System.Drawing.Size(59, 15);
             this.lb_patrones.TabIndex = 8;
@@ -372,7 +372,7 @@
             this.lb_entradas.AutoSize = true;
             this.lb_entradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_entradas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-            this.lb_entradas.Location = new System.Drawing.Point(72, 45);
+            this.lb_entradas.Location = new System.Drawing.Point(72, 42);
             this.lb_entradas.Name = "lb_entradas";
             this.lb_entradas.Size = new System.Drawing.Size(19, 15);
             this.lb_entradas.TabIndex = 6;
@@ -435,9 +435,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panelcontenedor;
         private System.Windows.Forms.Label label1;
