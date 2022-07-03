@@ -152,11 +152,8 @@ namespace Redes_Neuronales {
                     for (int i = 0; i < Variables._patrones; i++) {
 
                         GraficaYdYR.Series["yd"].Points.AddXY(Variables.Entradas[i][0], Variables.Salidas[i][0]);
-                        
                     }
-                        
                 }
-                
 
                 for (int iteraciones = 0; iteraciones < Variables.numIteraciones; iteraciones++) {
 
@@ -217,10 +214,6 @@ namespace Redes_Neuronales {
 
                 }
 
-                
-
-               
-
             }
         }
 
@@ -241,6 +234,10 @@ namespace Redes_Neuronales {
             button_Simular.Enabled = true;
             FrmSimulacion frmSimulacion = new FrmSimulacion();
             frmSimulacion.Show();
+        }
+
+        private void FrmUnicapa_Load_1(object sender, EventArgs e) {
+
         }
     }
 }

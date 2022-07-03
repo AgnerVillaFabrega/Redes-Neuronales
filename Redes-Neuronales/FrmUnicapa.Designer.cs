@@ -271,7 +271,6 @@
             this.button_Simular.TabIndex = 35;
             this.button_Simular.Text = "Simular";
             this.button_Simular.UseVisualStyleBackColor = false;
-            this.button_Simular.Click += new System.EventHandler(this.button_Simular_Click);
             // 
             // FrmUnicapa
             // 
@@ -294,6 +293,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmUnicapa";
             this.Text = "FrmUnicapa";
+            this.Load += new System.EventHandler(this.FrmUnicapa_Load);
             this.gbAE_unicapa.ResumeLayout(false);
             this.gbFA_unicapa.ResumeLayout(false);
             this.gbMatriz.ResumeLayout(false);
