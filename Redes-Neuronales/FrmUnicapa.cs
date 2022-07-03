@@ -11,6 +11,7 @@ namespace Redes_Neuronales {
 
 
         public FrmUnicapa() {
+
             InitializeComponent();
             BtmInicializar.Enabled = true;
         }
@@ -139,28 +140,34 @@ namespace Redes_Neuronales {
             double[] El = new double[Variables._salidas];
             double[] Ep = new double[Variables._patrones];
             double[] Eit = new double[Variables.numIteraciones];
-            int contador = 0;
-            int cont, cont1=0;
+           
 
             if (Variables.numIteraciones > 0) {
 
-                GraficaYdYR.Series.Add("yd").ChartType = SeriesChartType.Point;
-                GraficaYdYR.Series.Add("yR").ChartType = SeriesChartType.Spline;
+                GraficaYdYR.Series.Add("yd").ChartType = SeriesChartType.FastPoint;
+                GraficaYdYR.Series.Add("yR").ChartType = SeriesChartType.Line;
                 GraficaEi.Series.Add("Eit").ChartType = SeriesChartType.Line;
-                GraficaEi.BorderlineColor = System.Drawing.Color.Red;
 
-                foreach (var patrones in Variables.Entradas) {
+                //Para graficar solo con una entrada y una salida.
+                if (Variables._salidas == 1) {
 
-                    GraficaYdYR.Series["yd"].Points.AddXY(contador + patrones[0], contador + Variables.Salidas[Variables.Entradas.IndexOf(patrones)][0]);
-                    contador++;
+                    for (int i = 0; i < Variables._patrones; i++) {
+
+                        GraficaYdYR.Series["yd"].Points.AddXY(Variables.Entradas[i][0], Variables.Salidas[i][0]);
+                        
+                    }
+                        
                 }
+                
 
                 for (int iteraciones = 0; iteraciones < Variables.numIteraciones; iteraciones++) {
-                    cont = 0;
+
                     GraficaYdYR.Series["yR"].Points.Clear();
 
                     foreach (var patron in Variables.Entradas) {
 
+
+                        
                         for (int i = 0; i < Variables._salidas; i++) {
 
                             for (int j = 0; j < Variables._entradas; j++) {
@@ -171,14 +178,15 @@ namespace Redes_Neuronales {
 
                             yR[i] -= VectorUmbralUnicapa[i];
 
-                            GraficaYdYR.Series["yR"].Points.AddXY(cont, Math.Round(yR[i],2));
-                            cont++;
+                            
 
                             if (Variables.ValorCbTipo.ToUpper().Equals("PERCEPTRON")) {
 
                                 if (yR[i] >= 0) yR[i] = 1;
                                 if (yR[i] < 0) yR[i] = 0;
                             }
+
+                            GraficaYdYR.Series["yR"].Points.AddXY(Variables.Entradas[Variables.Entradas.IndexOf(patron)][0], yR[i]);
 
                             El[i] = Variables.Salidas[Variables.Entradas.IndexOf(patron)][i] - yR[i];
 
@@ -198,19 +206,24 @@ namespace Redes_Neuronales {
 
                         Eit[iteraciones] += Math.Abs(Ep[Variables.Entradas.IndexOf(patron)]);
 
+                        
                     }
 
                     Eit[iteraciones] /= Variables._patrones;
 
+                    GraficaEi.Series["Eit"].Points.AddXY(iteraciones, Eit[iteraciones]);
+                    await Task.Delay(32);
                     if (Eit[iteraciones] <= Variables.errorMaximo) {
                         iteraciones = Variables.numIteraciones;
                     }
 
-                    GraficaEi.Series["Eit"].Points.AddXY(cont1, Eit[cont1]);
-                    cont1++;
                 }
+
+                
+
+               
+
             }
-            button_Simular.Enabled = true;
         }
 
         private void cbFA_unicapa_SelectedIndexChanged(object sender, EventArgs e) {
@@ -221,14 +234,8 @@ namespace Redes_Neuronales {
             BtmEntrenar.Enabled = true;
         }
 
-        private void button_Simular_Click(object sender, EventArgs e) {
-            AbrirFrmSimular(new FrmSimulacion());
-        }
+        private void FrmUnicapa_Load(object sender, EventArgs e) {
 
-        private void AbrirFrmSimular(object frmHija) {
-            Form frmAux = frmHija as Form;
-            frmAux.Show();
         }
-
     }
 }

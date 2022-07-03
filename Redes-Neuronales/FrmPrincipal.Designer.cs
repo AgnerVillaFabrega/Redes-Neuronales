@@ -80,7 +80,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
             this.label1.Location = new System.Drawing.Point(386, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(371, 31);
+            this.label1.Size = new System.Drawing.Size(302, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Parametrizacion de una red";
             // 
@@ -133,7 +133,7 @@
             0,
             196608});
             this.nudRataAprendizaje.Name = "nudRataAprendizaje";
-            this.nudRataAprendizaje.Size = new System.Drawing.Size(80, 22);
+            this.nudRataAprendizaje.Size = new System.Drawing.Size(80, 20);
             this.nudRataAprendizaje.TabIndex = 9;
             this.nudRataAprendizaje.Value = new decimal(new int[] {
             1,
@@ -160,7 +160,7 @@
             0,
             65536});
             this.nudErrorMaximo.Name = "nudErrorMaximo";
-            this.nudErrorMaximo.Size = new System.Drawing.Size(80, 22);
+            this.nudErrorMaximo.Size = new System.Drawing.Size(80, 20);
             this.nudErrorMaximo.TabIndex = 8;
             this.nudErrorMaximo.ValueChanged += new System.EventHandler(this.nudErrorMaximo_ValueChanged);
             // 
@@ -181,7 +181,7 @@
             0,
             0});
             this.nudNumeroIteraciones.Name = "nudNumeroIteraciones";
-            this.nudNumeroIteraciones.Size = new System.Drawing.Size(80, 22);
+            this.nudNumeroIteraciones.Size = new System.Drawing.Size(80, 20);
             this.nudNumeroIteraciones.TabIndex = 7;
             this.nudNumeroIteraciones.Value = new decimal(new int[] {
             1,
@@ -198,9 +198,9 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.label7.Location = new System.Drawing.Point(914, 21);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(187, 18);
+            this.label7.Size = new System.Drawing.Size(159, 15);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Error maximo permirido";
+            this.label7.Text = "Error maximo permitido";
             // 
             // label6
             // 
@@ -210,7 +210,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.label6.Location = new System.Drawing.Point(503, 21);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(162, 18);
+            this.label6.Size = new System.Drawing.Size(141, 15);
             this.label6.TabIndex = 5;
             this.label6.Text = "Rata de aprendizaje ";
             // 
@@ -222,7 +222,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.label5.Location = new System.Drawing.Point(85, 21);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(179, 18);
+            this.label5.Size = new System.Drawing.Size(153, 15);
             this.label5.TabIndex = 4;
             this.label5.Text = "Numero de iteraciones";
             // 
@@ -241,7 +241,6 @@
             this.panelContenedorTipo.Name = "panelContenedorTipo";
             this.panelContenedorTipo.Size = new System.Drawing.Size(1175, 568);
             this.panelContenedorTipo.TabIndex = 1;
-            this.panelContenedorTipo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorTipo_Paint);
             // 
             // panelPaso1
             // 
@@ -273,7 +272,7 @@
             "Backpropagation"});
             this.cbTipoRed.Location = new System.Drawing.Point(941, 19);
             this.cbTipoRed.Name = "cbTipoRed";
-            this.cbTipoRed.Size = new System.Drawing.Size(210, 26);
+            this.cbTipoRed.Size = new System.Drawing.Size(210, 23);
             this.cbTipoRed.TabIndex = 25;
             this.cbTipoRed.SelectedIndexChanged += new System.EventHandler(this.cbTipoRed_SelectedIndexChanged_1);
             // 
@@ -292,7 +291,7 @@
             "Multicapa"});
             this.cbSeleccionCapa.Location = new System.Drawing.Point(941, 58);
             this.cbSeleccionCapa.Name = "cbSeleccionCapa";
-            this.cbSeleccionCapa.Size = new System.Drawing.Size(210, 26);
+            this.cbSeleccionCapa.Size = new System.Drawing.Size(210, 23);
             this.cbSeleccionCapa.TabIndex = 24;
             this.cbSeleccionCapa.SelectedIndexChanged += new System.EventHandler(this.cbSeleccionCapa_SelectedIndexChanged);
             // 
@@ -304,7 +303,7 @@
             this.txtRuta.Location = new System.Drawing.Point(14, 63);
             this.txtRuta.Name = "txtRuta";
             this.txtRuta.ReadOnly = true;
-            this.txtRuta.Size = new System.Drawing.Size(207, 22);
+            this.txtRuta.Size = new System.Drawing.Size(207, 20);
             this.txtRuta.TabIndex = 23;
             this.txtRuta.Text = "Ruta";
             this.txtRuta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -329,9 +328,9 @@
             this.lb_patrones.AutoSize = true;
             this.lb_patrones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_patrones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-            this.lb_patrones.Location = new System.Drawing.Point(569, 45);
+            this.lb_patrones.Location = new System.Drawing.Point(569, 42);
             this.lb_patrones.Name = "lb_patrones";
-            this.lb_patrones.Size = new System.Drawing.Size(69, 18);
+            this.lb_patrones.Size = new System.Drawing.Size(59, 15);
             this.lb_patrones.TabIndex = 8;
             this.lb_patrones.Text = "patterns";
             // 
@@ -342,7 +341,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
             this.label2.Location = new System.Drawing.Point(49, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 20);
+            this.label2.Size = new System.Drawing.Size(67, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Entradas: ";
             // 
@@ -353,7 +352,7 @@
             this.lb_salidas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
             this.lb_salidas.Location = new System.Drawing.Point(317, 42);
             this.lb_salidas.Name = "lb_salidas";
-            this.lb_salidas.Size = new System.Drawing.Size(32, 18);
+            this.lb_salidas.Size = new System.Drawing.Size(27, 15);
             this.lb_salidas.TabIndex = 7;
             this.lb_salidas.Text = "out";
             // 
@@ -364,7 +363,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
             this.label3.Location = new System.Drawing.Point(300, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 20);
+            this.label3.Size = new System.Drawing.Size(59, 16);
             this.label3.TabIndex = 4;
             this.label3.Text = "Salidas: ";
             // 
@@ -373,9 +372,9 @@
             this.lb_entradas.AutoSize = true;
             this.lb_entradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_entradas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-            this.lb_entradas.Location = new System.Drawing.Point(72, 45);
+            this.lb_entradas.Location = new System.Drawing.Point(72, 42);
             this.lb_entradas.Name = "lb_entradas";
-            this.lb_entradas.Size = new System.Drawing.Size(21, 18);
+            this.lb_entradas.Size = new System.Drawing.Size(19, 15);
             this.lb_entradas.TabIndex = 6;
             this.lb_entradas.Text = "in";
             // 
@@ -386,7 +385,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
             this.label4.Location = new System.Drawing.Point(543, 19);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 20);
+            this.label4.Size = new System.Drawing.Size(67, 16);
             this.label4.TabIndex = 5;
             this.label4.Text = "Patrones: ";
             // 
@@ -418,6 +417,7 @@
             this.Controls.Add(this.panel3);
             this.MaximizeBox = false;
             this.Name = "FrmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panelcontenedor.ResumeLayout(false);
@@ -436,9 +436,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panelcontenedor;
         private System.Windows.Forms.Label label1;
