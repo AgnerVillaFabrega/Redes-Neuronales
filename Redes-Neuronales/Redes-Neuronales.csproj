@@ -81,6 +81,12 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSimulacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSimulacion.Designer.cs">
+      <DependentUpon>FrmSimulacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUnicapa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSimulacion.resx">
+      <DependentUpon>FrmSimulacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUnicapa.resx">
       <DependentUpon>FrmUnicapa.cs</DependentUpon>

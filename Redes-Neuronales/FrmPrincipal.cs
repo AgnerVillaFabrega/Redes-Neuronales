@@ -84,6 +84,7 @@ namespace Redes_Neuronales {
             }
         }
 
+
         private void cbSeleccionCapa_SelectedIndexChanged(object sender, EventArgs e) {
 
             
@@ -113,6 +114,15 @@ namespace Redes_Neuronales {
 
         private void nudErrorMaximo_ValueChanged(object sender, EventArgs e) {
             Variables.errorMaximo = (double)nudErrorMaximo.Value;
+        }
+
+        private void Button_Simular_Click(object sender, EventArgs e) {
+
+            AbrirFrm2(new FrmSimulacion());
+        }
+
+        private void panelContenedorTipo_Paint(object sender, PaintEventArgs e) {
+
         }
     }
 }

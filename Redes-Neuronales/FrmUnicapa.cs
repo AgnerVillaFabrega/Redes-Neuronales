@@ -11,7 +11,6 @@ namespace Redes_Neuronales {
 
 
         public FrmUnicapa() {
-
             InitializeComponent();
             BtmInicializar.Enabled = true;
         }
@@ -141,17 +140,18 @@ namespace Redes_Neuronales {
             double[] Ep = new double[Variables._patrones];
             double[] Eit = new double[Variables.numIteraciones];
             int contador = 0;
-            int cont;
-           
+            int cont, cont1=0;
 
             if (Variables.numIteraciones > 0) {
 
-                GraficaYdYR.Series.Add("yd").ChartType = SeriesChartType.Line;
-                GraficaYdYR.Series.Add("yR").ChartType = SeriesChartType.Line;
+                GraficaYdYR.Series.Add("yd").ChartType = SeriesChartType.Point;
+                GraficaYdYR.Series.Add("yR").ChartType = SeriesChartType.Spline;
+                GraficaEi.Series.Add("Eit").ChartType = SeriesChartType.Line;
+                GraficaEi.BorderlineColor = System.Drawing.Color.Red;
 
                 foreach (var patrones in Variables.Entradas) {
 
-                    GraficaYdYR.Series["yd"].Points.AddXY(contador + patrones[0], contador + patrones[1]);
+                    GraficaYdYR.Series["yd"].Points.AddXY(contador + patrones[0], contador + Variables.Salidas[Variables.Entradas.IndexOf(patrones)][0]);
                     contador++;
                 }
 
@@ -171,9 +171,8 @@ namespace Redes_Neuronales {
 
                             yR[i] -= VectorUmbralUnicapa[i];
 
-                            GraficaYdYR.Series["yR"].Points.AddXY(cont, yR[i]);
-
-                            await Task.Delay(100);
+                            GraficaYdYR.Series["yR"].Points.AddXY(cont, Math.Round(yR[i],2));
+                            cont++;
 
                             if (Variables.ValorCbTipo.ToUpper().Equals("PERCEPTRON")) {
 
@@ -193,7 +192,6 @@ namespace Redes_Neuronales {
 
                             Ep[Variables.Entradas.IndexOf(patron)] += Math.Abs(El[i]);
 
-                            cont++;
                         }
 
                         Ep[Variables.Entradas.IndexOf(patron)] /= Variables._salidas;
@@ -208,16 +206,11 @@ namespace Redes_Neuronales {
                         iteraciones = Variables.numIteraciones;
                     }
 
+                    GraficaEi.Series["Eit"].Points.AddXY(cont1, Eit[cont1]);
+                    cont1++;
                 }
-
-                GraficaEi.Series.Add("Eit").ChartType = SeriesChartType.Line;
-
-                for (int i = 0; i < Eit.Length; i++) {
-                    GraficaEi.Series["Eit"].Points.AddXY(i, Eit[i]);
-                    await Task.Delay(100);
-                }
-
             }
+            button_Simular.Enabled = true;
         }
 
         private void cbFA_unicapa_SelectedIndexChanged(object sender, EventArgs e) {
@@ -228,8 +221,14 @@ namespace Redes_Neuronales {
             BtmEntrenar.Enabled = true;
         }
 
-        private void FrmUnicapa_Load(object sender, EventArgs e) {
-
+        private void button_Simular_Click(object sender, EventArgs e) {
+            AbrirFrmSimular(new FrmSimulacion());
         }
+
+        private void AbrirFrmSimular(object frmHija) {
+            Form frmAux = frmHija as Form;
+            frmAux.Show();
+        }
+
     }
 }
