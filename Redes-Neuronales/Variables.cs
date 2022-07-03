@@ -12,7 +12,8 @@ namespace Redes_Neuronales {
         public static int numIteraciones = 1;
         public static double rataAprendizaje = 0.001;
         public static double errorMaximo = 0;
-
+        public static double[,] MatrizPesoUnicapa;
+        public static double[] VectorUmbralUnicapa;
         public static int _entradas { get; set; }
         public static int _salidas { get; set; }
         public static int _patrones { get; set; }

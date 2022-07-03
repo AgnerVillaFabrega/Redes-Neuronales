@@ -6,8 +6,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 namespace Redes_Neuronales {
     public partial class FrmUnicapa : Form {
 
-        public double[,] MatrizPesoUnicapa;
-        public double[] VectorUmbralUnicapa;
+        
 
 
         public FrmUnicapa() {
@@ -17,17 +16,16 @@ namespace Redes_Neuronales {
         }
 
         public void _Generar() {
+            Variables.MatrizPesoUnicapa = new double[Variables._entradas, Variables._salidas];
+            Variables.VectorUmbralUnicapa = new double[Variables._salidas];
 
-            MatrizPesoUnicapa = new double[Variables._entradas, Variables._salidas];
-            VectorUmbralUnicapa = new double[Variables._salidas];
+            Variables.GenerarMatriz(Variables.MatrizPesoUnicapa, Variables._entradas, Variables._salidas);
+            Variables.GuardarMatriz(Variables.MatrizPesoUnicapa, Variables._entradas, Variables._salidas, "../../../Assets/Matriz de peso unicapa.txt");
+            Variables.Mostrarmatriz(Variables.MatrizPesoUnicapa, dgvMatrizPesos, Variables._entradas, Variables._salidas);
 
-            Variables.GenerarMatriz(MatrizPesoUnicapa, Variables._entradas, Variables._salidas);
-            Variables.GuardarMatriz(MatrizPesoUnicapa, Variables._entradas, Variables._salidas, "../../../Assets/Matriz de peso unicapa.txt");
-            Variables.Mostrarmatriz(MatrizPesoUnicapa, dgvMatrizPesos, Variables._entradas, Variables._salidas);
-
-            Variables.GenerarVector(VectorUmbralUnicapa, Variables._salidas);
-            Variables.GuardarVector(VectorUmbralUnicapa, Variables._salidas, "../../../Assets/Vector de umbrales unicapa.txt");
-            Variables.MostrarVector(VectorUmbralUnicapa, lsbVectorUmbrales, Variables._salidas);
+            Variables.GenerarVector(Variables.VectorUmbralUnicapa, Variables._salidas);
+            Variables.GuardarVector(Variables.VectorUmbralUnicapa, Variables._salidas, "../../../Assets/Vector de umbrales unicapa.txt");
+            Variables.MostrarVector(Variables.VectorUmbralUnicapa, lsbVectorUmbrales, Variables._salidas);
         }
 
         public void LlenarComboBox() {
@@ -61,15 +59,15 @@ namespace Redes_Neuronales {
             GraficaEi.Series.Clear();
             GraficaYdYR.Series.Clear();
 
-            MatrizPesoUnicapa = new double[Variables._entradas, Variables._salidas];
-            VectorUmbralUnicapa = new double[Variables._salidas];
+            Variables.MatrizPesoUnicapa = new double[Variables._entradas, Variables._salidas];
+            Variables.VectorUmbralUnicapa = new double[Variables._salidas];
 
             DialogResult resultado = MessageBox.Show("¿Desea seguir entrenado con pesos y umbrales anteriores?", "", MessageBoxButtons.YesNoCancel);
 
             if (resultado == DialogResult.Yes ) {
 
-                Variables.CargarMatrizExistente(MatrizPesoUnicapa, Variables._entradas, Variables._salidas, "../../../Assets/Matriz de peso unicapa.txt");
-                Variables.CargarVectorExistente(VectorUmbralUnicapa, Variables._salidas, "../../../Assets/Vector de umbrales unicapa.txt");
+                Variables.CargarMatrizExistente(Variables.MatrizPesoUnicapa, Variables._entradas, Variables._salidas, "../../../Assets/Matriz de peso unicapa.txt");
+                Variables.CargarVectorExistente(Variables.VectorUmbralUnicapa, Variables._salidas, "../../../Assets/Vector de umbrales unicapa.txt");
 
             }else if (resultado == DialogResult.No) {
 
@@ -172,11 +170,11 @@ namespace Redes_Neuronales {
 
                             for (int j = 0; j < Variables._entradas; j++) {
 
-                                yR[i] += patron[j] * MatrizPesoUnicapa[j, i];
+                                yR[i] += patron[j] * Variables.MatrizPesoUnicapa[j, i];
 
                             }
 
-                            yR[i] -= VectorUmbralUnicapa[i];
+                            yR[i] -= Variables.VectorUmbralUnicapa[i];
 
                             
 
@@ -192,11 +190,11 @@ namespace Redes_Neuronales {
 
                             for (int j = 0; j < Variables._entradas; j++) {
 
-                                MatrizPesoUnicapa[j, i] = MatrizPesoUnicapa[j, i] + Variables.rataAprendizaje * El[i] * patron[j];
+                                Variables.MatrizPesoUnicapa[j, i] = Variables.MatrizPesoUnicapa[j, i] + Variables.rataAprendizaje * El[i] * patron[j];
 
                             }
 
-                            VectorUmbralUnicapa[i] = VectorUmbralUnicapa[i] + Variables.rataAprendizaje * El[i];
+                            Variables.VectorUmbralUnicapa[i] = Variables.VectorUmbralUnicapa[i] + Variables.rataAprendizaje * El[i];
 
                             Ep[Variables.Entradas.IndexOf(patron)] += Math.Abs(El[i]);
 
@@ -236,6 +234,13 @@ namespace Redes_Neuronales {
 
         private void FrmUnicapa_Load(object sender, EventArgs e) {
 
+        }
+
+        private void button_Simular_Click(object sender, EventArgs e)
+        {
+            button_Simular.Enabled = true;
+            FrmSimulacion frmSimulacion = new FrmSimulacion();
+            frmSimulacion.Show();
         }
     }
 }
