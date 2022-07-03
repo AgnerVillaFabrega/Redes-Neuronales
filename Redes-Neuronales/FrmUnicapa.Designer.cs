@@ -46,6 +46,7 @@
             this.BtmEntrenar = new System.Windows.Forms.Button();
             this.lsbVectorUmbrales = new System.Windows.Forms.ListBox();
             this.dgvMatrizPesos = new System.Windows.Forms.DataGridView();
+            this.button_Simular = new System.Windows.Forms.Button();
             this.gbAE_unicapa.SuspendLayout();
             this.gbFA_unicapa.SuspendLayout();
             this.gbMatriz.SuspendLayout();
@@ -74,9 +75,9 @@
             this.gbAE_unicapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Italic);
             this.gbAE_unicapa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.gbAE_unicapa.Location = new System.Drawing.Point(856, 160);
-            this.gbAE_unicapa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbAE_unicapa.Margin = new System.Windows.Forms.Padding(4);
             this.gbAE_unicapa.Name = "gbAE_unicapa";
-            this.gbAE_unicapa.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbAE_unicapa.Padding = new System.Windows.Forms.Padding(4);
             this.gbAE_unicapa.Size = new System.Drawing.Size(483, 86);
             this.gbAE_unicapa.TabIndex = 21;
             this.gbAE_unicapa.TabStop = false;
@@ -90,7 +91,7 @@
             this.cbAE_unicapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbAE_unicapa.FormattingEnabled = true;
             this.cbAE_unicapa.Location = new System.Drawing.Point(77, 33);
-            this.cbAE_unicapa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbAE_unicapa.Margin = new System.Windows.Forms.Padding(4);
             this.cbAE_unicapa.Name = "cbAE_unicapa";
             this.cbAE_unicapa.Size = new System.Drawing.Size(351, 26);
             this.cbAE_unicapa.TabIndex = 0;
@@ -103,9 +104,9 @@
             this.gbFA_unicapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Italic);
             this.gbFA_unicapa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.gbFA_unicapa.Location = new System.Drawing.Point(208, 160);
-            this.gbFA_unicapa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbFA_unicapa.Margin = new System.Windows.Forms.Padding(4);
             this.gbFA_unicapa.Name = "gbFA_unicapa";
-            this.gbFA_unicapa.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbFA_unicapa.Padding = new System.Windows.Forms.Padding(4);
             this.gbFA_unicapa.Size = new System.Drawing.Size(483, 86);
             this.gbFA_unicapa.TabIndex = 20;
             this.gbFA_unicapa.TabStop = false;
@@ -118,7 +119,7 @@
             this.cbFA_unicapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFA_unicapa.FormattingEnabled = true;
             this.cbFA_unicapa.Location = new System.Drawing.Point(77, 33);
-            this.cbFA_unicapa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbFA_unicapa.Margin = new System.Windows.Forms.Padding(4);
             this.cbFA_unicapa.Name = "cbFA_unicapa";
             this.cbFA_unicapa.Size = new System.Drawing.Size(351, 26);
             this.cbFA_unicapa.TabIndex = 0;
@@ -149,7 +150,7 @@
             this.BtmInicializar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
             this.BtmInicializar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
             this.BtmInicializar.Location = new System.Drawing.Point(887, 91);
-            this.BtmInicializar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtmInicializar.Margin = new System.Windows.Forms.Padding(4);
             this.BtmInicializar.Name = "BtmInicializar";
             this.BtmInicializar.Size = new System.Drawing.Size(124, 33);
             this.BtmInicializar.TabIndex = 31;
@@ -164,9 +165,9 @@
             this.gbMatriz.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Italic);
             this.gbMatriz.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.gbMatriz.Location = new System.Drawing.Point(64, 268);
-            this.gbMatriz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbMatriz.Margin = new System.Windows.Forms.Padding(4);
             this.gbMatriz.Name = "gbMatriz";
-            this.gbMatriz.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbMatriz.Padding = new System.Windows.Forms.Padding(4);
             this.gbMatriz.Size = new System.Drawing.Size(627, 316);
             this.gbMatriz.TabIndex = 32;
             this.gbMatriz.TabStop = false;
@@ -194,9 +195,9 @@
             this.gbVector.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Italic);
             this.gbVector.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.gbVector.Location = new System.Drawing.Point(856, 268);
-            this.gbVector.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbVector.Margin = new System.Windows.Forms.Padding(4);
             this.gbVector.Name = "gbVector";
-            this.gbVector.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbVector.Padding = new System.Windows.Forms.Padding(4);
             this.gbVector.Size = new System.Drawing.Size(627, 316);
             this.gbVector.TabIndex = 33;
             this.gbVector.TabStop = false;
@@ -232,7 +233,7 @@
             this.BtmEntrenar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
             this.BtmEntrenar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtmEntrenar.Location = new System.Drawing.Point(664, 620);
-            this.BtmEntrenar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtmEntrenar.Margin = new System.Windows.Forms.Padding(4);
             this.BtmEntrenar.Name = "BtmEntrenar";
             this.BtmEntrenar.Size = new System.Drawing.Size(205, 66);
             this.BtmEntrenar.TabIndex = 34;
@@ -248,7 +249,7 @@
             this.lsbVectorUmbrales.FormattingEnabled = true;
             this.lsbVectorUmbrales.ItemHeight = 16;
             this.lsbVectorUmbrales.Location = new System.Drawing.Point(1152, 54);
-            this.lsbVectorUmbrales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lsbVectorUmbrales.Margin = new System.Windows.Forms.Padding(4);
             this.lsbVectorUmbrales.Name = "lsbVectorUmbrales";
             this.lsbVectorUmbrales.Size = new System.Drawing.Size(125, 48);
             this.lsbVectorUmbrales.TabIndex = 0;
@@ -261,12 +262,34 @@
             this.dgvMatrizPesos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMatrizPesos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
             this.dgvMatrizPesos.Location = new System.Drawing.Point(1324, 26);
-            this.dgvMatrizPesos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvMatrizPesos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvMatrizPesos.Name = "dgvMatrizPesos";
             this.dgvMatrizPesos.RowHeadersWidth = 51;
             this.dgvMatrizPesos.Size = new System.Drawing.Size(111, 76);
             this.dgvMatrizPesos.TabIndex = 28;
             this.dgvMatrizPesos.Visible = false;
+            // 
+            // button_Simular
+            // 
+            this.button_Simular.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_Simular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
+            this.button_Simular.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_Simular.Enabled = false;
+            this.button_Simular.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
+            this.button_Simular.FlatAppearance.BorderSize = 0;
+            this.button_Simular.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(77)))));
+            this.button_Simular.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
+            this.button_Simular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Simular.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
+            this.button_Simular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+            this.button_Simular.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_Simular.Location = new System.Drawing.Point(1278, 620);
+            this.button_Simular.Margin = new System.Windows.Forms.Padding(4);
+            this.button_Simular.Name = "button_Simular";
+            this.button_Simular.Size = new System.Drawing.Size(205, 66);
+            this.button_Simular.TabIndex = 35;
+            this.button_Simular.Text = "Simular";
+            this.button_Simular.UseVisualStyleBackColor = false;
             // 
             // FrmUnicapa
             // 
@@ -274,6 +297,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
             this.ClientSize = new System.Drawing.Size(1547, 725);
+            this.Controls.Add(this.button_Simular);
             this.Controls.Add(this.lsbVectorUmbrales);
             this.Controls.Add(this.BtmEntrenar);
             this.Controls.Add(this.dgvMatrizPesos);
@@ -288,7 +312,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmUnicapa";
             this.Text = "FrmUnicapa";
-            this.Load += new System.EventHandler(this.FrmUnicapa_Load);
+            this.Load += new System.EventHandler(this.FrmUnicapa_Load_1);
             this.gbAE_unicapa.ResumeLayout(false);
             this.gbFA_unicapa.ResumeLayout(false);
             this.gbMatriz.ResumeLayout(false);
@@ -317,5 +341,6 @@
         private System.Windows.Forms.ListBox lsbVectorUmbrales;
         private System.Windows.Forms.DataGridView dgvMatrizPesos;
         private System.Windows.Forms.DataVisualization.Charting.Chart GraficaYdYR;
+        private System.Windows.Forms.Button button_Simular;
     }
 }

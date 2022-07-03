@@ -417,6 +417,7 @@
             this.Controls.Add(this.panel3);
             this.MaximizeBox = false;
             this.Name = "FrmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panelcontenedor.ResumeLayout(false);
