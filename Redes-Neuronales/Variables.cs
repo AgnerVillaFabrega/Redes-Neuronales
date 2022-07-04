@@ -107,8 +107,6 @@ namespace Redes_Neuronales {
             textWriter.Close();
         }
         public static void Mostrarmatriz(double[,] matrizPeso, DataGridView dataGridView, int filas, int columnas) {
-            Console.WriteLine("filas: " + filas);
-            Console.WriteLine("columnas: " + columnas);
             dataGridView.RowCount = filas;
             dataGridView.ColumnCount = columnas;
 

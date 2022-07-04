@@ -6,9 +6,6 @@ using System.Windows.Forms.DataVisualization.Charting;
 namespace Redes_Neuronales {
     public partial class FrmUnicapa : Form {
 
-        
-
-
         public FrmUnicapa() {
 
             InitializeComponent();
@@ -161,26 +158,20 @@ namespace Redes_Neuronales {
 
                     foreach (var patron in Variables.Entradas) {
 
-
-                        
                         for (int i = 0; i < Variables._salidas; i++) {
 
                             for (int j = 0; j < Variables._entradas; j++) {
 
                                 yR[i] += patron[j] * Variables.MatrizPesoUnicapa[j, i];
-
                             }
 
                             yR[i] -= Variables.VectorUmbralUnicapa[i];
-
-                            
 
                             if (Variables.ValorCbTipo.ToUpper().Equals("PERCEPTRON")) {
 
                                 if (yR[i] >= 0) yR[i] = 1;
                                 if (yR[i] < 0) yR[i] = 0;
                             }
-
                             GraficaYdYR.Series["yR"].Points.AddXY(Variables.Entradas[Variables.Entradas.IndexOf(patron)][0], yR[i]);
 
                             El[i] = Variables.Salidas[Variables.Entradas.IndexOf(patron)][i] - yR[i];
@@ -231,13 +222,18 @@ namespace Redes_Neuronales {
 
         private void button_Simular_Click(object sender, EventArgs e)
         {
-            button_Simular.Enabled = true;
-            FrmSimulacion frmSimulacion = new FrmSimulacion();
-            frmSimulacion.Show();
+            
         }
 
         private void FrmUnicapa_Load_1(object sender, EventArgs e) {
 
+        }
+
+        private void button_Simular_Click_1(object sender, EventArgs e)
+        {
+            button_Simular.Enabled = true;
+            FrmSimulacion frmSimulacion = new FrmSimulacion();
+            frmSimulacion.Show();
         }
     }
 }

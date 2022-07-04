@@ -13,12 +13,12 @@ namespace Redes_Neuronales {
         public FrmSimulacion() {
             InitializeComponent();
         }
-
+        public List<int[]> newEntradas = new List<int[]>();
+        public List<int[]> newSalida = new List<int[]>();
         private void FrmSimulacion_Load(object sender, EventArgs e)
         {
             MostrarEntradas();
             MostrarSalidas();
-
         }
         private void MostrarEntradas()
         {
@@ -51,17 +51,19 @@ namespace Redes_Neuronales {
         {
             aniadirEntradas();
             //buttonSimular.Enabled = true;
-            //cargarPatronesDataGridEnLista();
+            
         }
+        int con;
         private void aniadirEntradas()
         {
-
+            con++;
             dgvSimEntradas.ColumnCount = Variables.Entradas[0].Count();
             dgvSimEntradas.Rows.Add();
             for (int i = 0; i < dgvSimEntradas.ColumnCount; i++)
             {
                 dgvSimEntradas.Rows[dgvSimEntradas.RowCount - 1].Cells[i].Value = 0;
             }
+           
         }
 
         private void dgvSimEntradas_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -79,8 +81,6 @@ namespace Redes_Neuronales {
             {
                 dgvSimEntradas.SelectedCells[0].Value = 0;
             }
-
-            //cargarPatronesDataGridEnLista();
         }
 
 
@@ -118,41 +118,49 @@ namespace Redes_Neuronales {
                 e.Control.KeyPress +=
                 new KeyPressEventHandler(dgvSimEntradas_KeyPress);
 
-
             }catch (Exception)
             {
 
             }
         }
-        public double[,] MatrizPesoUnicapa;
-        public double[] VectorUmbralUnicapa;
+        
+        private void cargarPatronesDataGridEnLista()
+        {
+            int[] temp = new int[dgvSimEntradas.ColumnCount];
+            for (int i = 0; i < dgvSimEntradas.RowCount; i++)
+            {
+                for (int j = 0; j < dgvSimEntradas.ColumnCount; j++)
+                {
+                    temp[j]= Convert.ToInt32(dgvSimEntradas.Rows[i].Cells[j].Value);
+                }
+                newEntradas.Add(temp);
+            }
+        }
         private void btmSimular_Click(object sender, EventArgs e)
         {
-            
-            MatrizPesoUnicapa = new double[Variables._entradas, Variables._salidas];
-            VectorUmbralUnicapa = new double[Variables._salidas];
-
+            cargarPatronesDataGridEnLista();
             double[] yR = new double[Variables._salidas];
             if (Variables.numIteraciones > 0)
             {
-                for (int iteraciones = 0; iteraciones < Variables.numIteraciones; iteraciones++)
+
+                dgvSimSalidas.ColumnCount = Variables.Salidas[0].Count();
+                dgvSimSalidas.RowCount = newEntradas.Count();
+                foreach (var patron in newEntradas)
                 {
-                    foreach (var patron in Variables.Entradas)//las entradas nuevas
+                    //Hacer un vector por todas las salidas en el primer patron
+                    for (int i = 0; i < Variables._salidas; i++)
                     {
-                        for (int i = 0; i < Variables._salidas; i++)
+                        for (int j = 0; j < Variables._entradas; j++)
                         {
-                            for (int j = 0; j < Variables._entradas; j++)
-                            {
-                                yR[i] += patron[j] * MatrizPesoUnicapa[j, i];
-                            }
-                            yR[i] -= VectorUmbralUnicapa[i];
-                            if (Variables.ValorCbTipo.ToUpper().Equals("PERCEPTRON"))
-                            {
-                                if (yR[i] >= 0) yR[i] = 1;
-                                if (yR[i] < 0) yR[i] = 0;
-                            }
-                            //Debe guardar los yR (agregandolo a una lista) y mostrarlo en el dgv
+                            yR[i] += patron[j] * Variables.MatrizPesoUnicapa[j, i];
                         }
+                        yR[i] -= Variables.VectorUmbralUnicapa[i];
+                        if (Variables.ValorCbTipo.ToUpper().Equals("PERCEPTRON"))
+                        {
+                            if (yR[i] >= 0) yR[i] = 1;
+                            if (yR[i] < 0) yR[i] = 0;
+                        }
+                        dgvSimSalidas.Rows[newEntradas.IndexOf(patron)].Cells[i].Value = yR[i];
                     }
                 }
             }
