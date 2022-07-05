@@ -13,6 +13,7 @@ namespace Redes_Neuronales
     public partial class Login : Form
     {
         FrmPrincipal frmPrincipal = new FrmPrincipal();
+        FrmSimulacion frmSimulacion = new FrmSimulacion();
         public int cont { get; set; }
         public Login()
         {
@@ -66,6 +67,12 @@ namespace Redes_Neuronales
                     cont = 0;
                     this.Hide();
                     frmPrincipal.Show();
+                }
+                else if (txtUser.Text.Equals("user") && txtPass.Text.Equals("1234"))
+                {
+                    cont = 0;
+                    this.Hide();
+                    frmSimulacion.Show();
                 }
                 else
                 {
