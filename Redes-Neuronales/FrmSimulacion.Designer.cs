@@ -23,56 +23,97 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.DGV_Principal = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Text_Simular = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Principal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dgvEntradas = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dgvSalidas = new System.Windows.Forms.DataGridView();
+            this.dgvSimSalidas = new System.Windows.Forms.DataGridView();
+            this.dgvSimEntradas = new System.Windows.Forms.DataGridView();
+            this.btmAñadir = new System.Windows.Forms.Button();
+            this.btmSimular = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEntradas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSalidas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSimSalidas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSimEntradas)).BeginInit();
             this.SuspendLayout();
             // 
-            // DGV_Principal
+            // dataGridView1
             // 
-            this.DGV_Principal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Principal.Location = new System.Drawing.Point(12, 108);
-            this.DGV_Principal.Name = "DGV_Principal";
-            this.DGV_Principal.RowHeadersWidth = 51;
-            this.DGV_Principal.RowTemplate.Height = 24;
-            this.DGV_Principal.Size = new System.Drawing.Size(592, 445);
-            this.DGV_Principal.TabIndex = 0;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 108);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(592, 445);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // dataGridView2
+            // btmSimular
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(772, 108);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(592, 445);
-            this.dataGridView2.TabIndex = 1;
+            this.btmSimular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
+            this.btmSimular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btmSimular.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
+            this.btmSimular.Location = new System.Drawing.Point(534, 138);
+            this.btmSimular.Name = "btmSimular";
+            this.btmSimular.Size = new System.Drawing.Size(71, 300);
+            this.btmSimular.TabIndex = 36;
+            this.btmSimular.Text = "Simular";
+            this.btmSimular.UseVisualStyleBackColor = false;
+            this.btmSimular.Click += new System.EventHandler(this.btmSimular_Click);
             // 
-            // Text_Simular
+            // label1
             // 
-            this.Text_Simular.AutoSize = true;
-            this.Text_Simular.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Text_Simular.Location = new System.Drawing.Point(613, 9);
-            this.Text_Simular.Name = "Text_Simular";
-            this.Text_Simular.Size = new System.Drawing.Size(162, 46);
-            this.Text_Simular.TabIndex = 2;
-            this.Text_Simular.Text = "Simular";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
+            this.label1.Location = new System.Drawing.Point(607, 112);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 21);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Entradas";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
+            this.label2.Location = new System.Drawing.Point(879, 112);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 21);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "Salidas";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(126, 99);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(141, 34);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "Agregar archivo";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
             // 
             // FrmSimulacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1376, 717);
             this.Controls.Add(this.Text_Simular);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.DGV_Principal);
+            this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmSimulacion";
             this.Text = "FrmSimulacion";
-            this.Load += new System.EventHandler(this.FrmSimulacion_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Principal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -81,7 +122,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView DGV_Principal;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label Text_Simular;
     }

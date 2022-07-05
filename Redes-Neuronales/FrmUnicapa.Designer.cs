@@ -61,10 +61,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
-            this.label10.Location = new System.Drawing.Point(59, 26);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(44, 21);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(108, 29);
+            this.label10.Size = new System.Drawing.Size(86, 24);
             this.label10.TabIndex = 18;
             this.label10.Text = "Unicapa";
             // 
@@ -74,11 +73,9 @@
             this.gbAE_unicapa.Enabled = false;
             this.gbAE_unicapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Italic);
             this.gbAE_unicapa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
-            this.gbAE_unicapa.Location = new System.Drawing.Point(856, 160);
-            this.gbAE_unicapa.Margin = new System.Windows.Forms.Padding(4);
+            this.gbAE_unicapa.Location = new System.Drawing.Point(642, 130);
             this.gbAE_unicapa.Name = "gbAE_unicapa";
-            this.gbAE_unicapa.Padding = new System.Windows.Forms.Padding(4);
-            this.gbAE_unicapa.Size = new System.Drawing.Size(483, 86);
+            this.gbAE_unicapa.Size = new System.Drawing.Size(362, 70);
             this.gbAE_unicapa.TabIndex = 21;
             this.gbAE_unicapa.TabStop = false;
             this.gbAE_unicapa.Text = "Algoritmo de entrenamiento";
@@ -90,10 +87,9 @@
             this.cbAE_unicapa.Enabled = false;
             this.cbAE_unicapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbAE_unicapa.FormattingEnabled = true;
-            this.cbAE_unicapa.Location = new System.Drawing.Point(77, 33);
-            this.cbAE_unicapa.Margin = new System.Windows.Forms.Padding(4);
+            this.cbAE_unicapa.Location = new System.Drawing.Point(58, 27);
             this.cbAE_unicapa.Name = "cbAE_unicapa";
-            this.cbAE_unicapa.Size = new System.Drawing.Size(351, 26);
+            this.cbAE_unicapa.Size = new System.Drawing.Size(264, 23);
             this.cbAE_unicapa.TabIndex = 0;
             this.cbAE_unicapa.SelectedIndexChanged += new System.EventHandler(this.cbAE_unicapa_SelectedIndexChanged);
             // 
@@ -103,11 +99,9 @@
             this.gbFA_unicapa.Enabled = false;
             this.gbFA_unicapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Italic);
             this.gbFA_unicapa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
-            this.gbFA_unicapa.Location = new System.Drawing.Point(208, 160);
-            this.gbFA_unicapa.Margin = new System.Windows.Forms.Padding(4);
+            this.gbFA_unicapa.Location = new System.Drawing.Point(156, 130);
             this.gbFA_unicapa.Name = "gbFA_unicapa";
-            this.gbFA_unicapa.Padding = new System.Windows.Forms.Padding(4);
-            this.gbFA_unicapa.Size = new System.Drawing.Size(483, 86);
+            this.gbFA_unicapa.Size = new System.Drawing.Size(362, 70);
             this.gbFA_unicapa.TabIndex = 20;
             this.gbFA_unicapa.TabStop = false;
             this.gbFA_unicapa.Text = "Funcion de activacion";
@@ -118,10 +112,9 @@
             this.cbFA_unicapa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFA_unicapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFA_unicapa.FormattingEnabled = true;
-            this.cbFA_unicapa.Location = new System.Drawing.Point(77, 33);
-            this.cbFA_unicapa.Margin = new System.Windows.Forms.Padding(4);
+            this.cbFA_unicapa.Location = new System.Drawing.Point(58, 27);
             this.cbFA_unicapa.Name = "cbFA_unicapa";
-            this.cbFA_unicapa.Size = new System.Drawing.Size(351, 26);
+            this.cbFA_unicapa.Size = new System.Drawing.Size(264, 23);
             this.cbFA_unicapa.TabIndex = 0;
             this.cbFA_unicapa.SelectedIndexChanged += new System.EventHandler(this.cbFA_unicapa_SelectedIndexChanged);
             // 
@@ -130,10 +123,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
-            this.label1.Location = new System.Drawing.Point(500, 82);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(375, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(299, 20);
+            this.label1.Size = new System.Drawing.Size(246, 16);
             this.label1.TabIndex = 22;
             this.label1.Text = "Inicializacion de pesos y umbrales";
             // 
@@ -149,10 +141,9 @@
             this.BtmInicializar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtmInicializar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
             this.BtmInicializar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-            this.BtmInicializar.Location = new System.Drawing.Point(887, 91);
-            this.BtmInicializar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtmInicializar.Location = new System.Drawing.Point(665, 74);
             this.BtmInicializar.Name = "BtmInicializar";
-            this.BtmInicializar.Size = new System.Drawing.Size(124, 33);
+            this.BtmInicializar.Size = new System.Drawing.Size(93, 27);
             this.BtmInicializar.TabIndex = 31;
             this.BtmInicializar.Text = "Inicializar";
             this.BtmInicializar.UseVisualStyleBackColor = false;
@@ -164,11 +155,9 @@
             this.gbMatriz.Enabled = false;
             this.gbMatriz.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Italic);
             this.gbMatriz.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
-            this.gbMatriz.Location = new System.Drawing.Point(64, 268);
-            this.gbMatriz.Margin = new System.Windows.Forms.Padding(4);
+            this.gbMatriz.Location = new System.Drawing.Point(48, 218);
             this.gbMatriz.Name = "gbMatriz";
-            this.gbMatriz.Padding = new System.Windows.Forms.Padding(4);
-            this.gbMatriz.Size = new System.Drawing.Size(627, 316);
+            this.gbMatriz.Size = new System.Drawing.Size(470, 257);
             this.gbMatriz.TabIndex = 32;
             this.gbMatriz.TabStop = false;
             this.gbMatriz.Text = "Grafica de error de iteracion";
@@ -181,10 +170,10 @@
             this.GraficaEi.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.GraficaEi.Legends.Add(legend1);
-            this.GraficaEi.Location = new System.Drawing.Point(7, 25);
-            this.GraficaEi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GraficaEi.Location = new System.Drawing.Point(5, 20);
+            this.GraficaEi.Margin = new System.Windows.Forms.Padding(2);
             this.GraficaEi.Name = "GraficaEi";
-            this.GraficaEi.Size = new System.Drawing.Size(613, 286);
+            this.GraficaEi.Size = new System.Drawing.Size(460, 232);
             this.GraficaEi.TabIndex = 29;
             this.GraficaEi.Text = "chart1";
             // 
@@ -194,11 +183,9 @@
             this.gbVector.Enabled = false;
             this.gbVector.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Italic);
             this.gbVector.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
-            this.gbVector.Location = new System.Drawing.Point(856, 268);
-            this.gbVector.Margin = new System.Windows.Forms.Padding(4);
+            this.gbVector.Location = new System.Drawing.Point(642, 218);
             this.gbVector.Name = "gbVector";
-            this.gbVector.Padding = new System.Windows.Forms.Padding(4);
-            this.gbVector.Size = new System.Drawing.Size(627, 316);
+            this.gbVector.Size = new System.Drawing.Size(470, 257);
             this.gbVector.TabIndex = 33;
             this.gbVector.TabStop = false;
             this.gbVector.Text = "Grafica YD vs YR";
@@ -207,14 +194,14 @@
             // 
             this.GraficaYdYR.BackColor = System.Drawing.Color.Transparent;
             this.GraficaYdYR.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            this.GraficaYdYR.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.GraficaYdYR.Legends.Add(legend2);
+            chartArea6.Name = "ChartArea1";
+            this.GraficaYdYR.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.GraficaYdYR.Legends.Add(legend6);
             this.GraficaYdYR.Location = new System.Drawing.Point(7, 23);
             this.GraficaYdYR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GraficaYdYR.Name = "GraficaYdYR";
-            this.GraficaYdYR.Size = new System.Drawing.Size(613, 287);
+            this.GraficaYdYR.Size = new System.Drawing.Size(460, 233);
             this.GraficaYdYR.TabIndex = 30;
             this.GraficaYdYR.Text = "chart1";
             // 
@@ -232,10 +219,9 @@
             this.BtmEntrenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
             this.BtmEntrenar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
             this.BtmEntrenar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtmEntrenar.Location = new System.Drawing.Point(664, 620);
-            this.BtmEntrenar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtmEntrenar.Location = new System.Drawing.Point(498, 504);
             this.BtmEntrenar.Name = "BtmEntrenar";
-            this.BtmEntrenar.Size = new System.Drawing.Size(205, 66);
+            this.BtmEntrenar.Size = new System.Drawing.Size(154, 54);
             this.BtmEntrenar.TabIndex = 34;
             this.BtmEntrenar.Text = "Comenzar Entrenamiento";
             this.BtmEntrenar.UseVisualStyleBackColor = false;
@@ -247,11 +233,9 @@
             this.lsbVectorUmbrales.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lsbVectorUmbrales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.lsbVectorUmbrales.FormattingEnabled = true;
-            this.lsbVectorUmbrales.ItemHeight = 16;
-            this.lsbVectorUmbrales.Location = new System.Drawing.Point(1152, 54);
-            this.lsbVectorUmbrales.Margin = new System.Windows.Forms.Padding(4);
+            this.lsbVectorUmbrales.Location = new System.Drawing.Point(864, 44);
             this.lsbVectorUmbrales.Name = "lsbVectorUmbrales";
-            this.lsbVectorUmbrales.Size = new System.Drawing.Size(125, 48);
+            this.lsbVectorUmbrales.Size = new System.Drawing.Size(94, 39);
             this.lsbVectorUmbrales.TabIndex = 0;
             this.lsbVectorUmbrales.Visible = false;
             // 
@@ -261,11 +245,10 @@
             this.dgvMatrizPesos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMatrizPesos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMatrizPesos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
-            this.dgvMatrizPesos.Location = new System.Drawing.Point(1324, 26);
-            this.dgvMatrizPesos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvMatrizPesos.Location = new System.Drawing.Point(993, 21);
             this.dgvMatrizPesos.Name = "dgvMatrizPesos";
             this.dgvMatrizPesos.RowHeadersWidth = 51;
-            this.dgvMatrizPesos.Size = new System.Drawing.Size(111, 76);
+            this.dgvMatrizPesos.Size = new System.Drawing.Size(83, 62);
             this.dgvMatrizPesos.TabIndex = 28;
             this.dgvMatrizPesos.Visible = false;
             // 
@@ -274,7 +257,6 @@
             this.button_Simular.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button_Simular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(71)))), ((int)(((byte)(89)))));
             this.button_Simular.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_Simular.Enabled = false;
             this.button_Simular.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
             this.button_Simular.FlatAppearance.BorderSize = 0;
             this.button_Simular.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(77)))));
@@ -283,21 +265,19 @@
             this.button_Simular.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold);
             this.button_Simular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
             this.button_Simular.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button_Simular.Location = new System.Drawing.Point(1278, 620);
-            this.button_Simular.Margin = new System.Windows.Forms.Padding(4);
+            this.button_Simular.Location = new System.Drawing.Point(958, 504);
             this.button_Simular.Name = "button_Simular";
-            this.button_Simular.Size = new System.Drawing.Size(205, 66);
+            this.button_Simular.Size = new System.Drawing.Size(154, 54);
             this.button_Simular.TabIndex = 35;
             this.button_Simular.Text = "Simular";
             this.button_Simular.UseVisualStyleBackColor = false;
-            this.button_Simular.Click += new System.EventHandler(this.button_Simular_Click);
             // 
             // FrmUnicapa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(194)))), ((int)(((byte)(211)))));
-            this.ClientSize = new System.Drawing.Size(1547, 725);
+            this.ClientSize = new System.Drawing.Size(1160, 589);
             this.Controls.Add(this.button_Simular);
             this.Controls.Add(this.lsbVectorUmbrales);
             this.Controls.Add(this.BtmEntrenar);
@@ -310,7 +290,7 @@
             this.Controls.Add(this.gbFA_unicapa);
             this.Controls.Add(this.label10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmUnicapa";
             this.Text = "FrmUnicapa";
             this.gbAE_unicapa.ResumeLayout(false);

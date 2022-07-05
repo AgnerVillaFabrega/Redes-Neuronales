@@ -13,6 +13,7 @@ namespace Redes_Neuronales
     public partial class Login : Form
     {
         FrmPrincipal frmPrincipal = new FrmPrincipal();
+        FrmSimulacion frmSimulacion = new FrmSimulacion();
         public int cont { get; set; }
         public Login()
         {
