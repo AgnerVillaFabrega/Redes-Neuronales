@@ -8,7 +8,7 @@ namespace Redes_Neuronales {
 
         public double[,] MatrizPesoUnicapa;
         public double[] VectorUmbralUnicapa;
-
+        string fileName;
 
         public FrmUnicapa() {
 
@@ -162,8 +162,6 @@ namespace Redes_Neuronales {
                     GraficaYdYR.Series["yR"].Points.Clear();
 
                     foreach (var patron in Variables.Entradas) {
-
-
                         
                         for (int i = 0; i < Variables._salidas; i++) {
 
@@ -174,8 +172,6 @@ namespace Redes_Neuronales {
                             }
 
                             yR[i] -= VectorUmbralUnicapa[i];
-
-                            
 
                             if (Variables.ValorCbTipo.ToUpper().Equals("PERCEPTRON")) {
 
@@ -217,6 +213,7 @@ namespace Redes_Neuronales {
                 }
 
             }
+            button_Simular.Enabled = true;
         }
 
         private void cbFA_unicapa_SelectedIndexChanged(object sender, EventArgs e) {
@@ -227,12 +224,14 @@ namespace Redes_Neuronales {
             BtmEntrenar.Enabled = true;
         }
 
-        private void FrmUnicapa_Load(object sender, EventArgs e) {
+        private void button_Simular_Click(object sender, EventArgs e) {
 
+            AbrirFrmSimular(new FrmSimulacion());
         }
 
-        private void FrmUnicapa_Load_1(object sender, EventArgs e) {
-
+        private void AbrirFrmSimular(object frmHija) {
+            Form frmAux = frmHija as Form;
+            frmAux.Show();
         }
     }
 }

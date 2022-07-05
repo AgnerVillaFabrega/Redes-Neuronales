@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.label10 = new System.Windows.Forms.Label();
             this.gbAE_unicapa = new System.Windows.Forms.GroupBox();
             this.cbAE_unicapa = new System.Windows.Forms.ComboBox();
@@ -177,10 +177,10 @@
             // 
             this.GraficaEi.BackColor = System.Drawing.Color.Transparent;
             this.GraficaEi.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea5.Name = "ChartArea1";
-            this.GraficaEi.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.GraficaEi.Legends.Add(legend5);
+            chartArea1.Name = "ChartArea1";
+            this.GraficaEi.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.GraficaEi.Legends.Add(legend1);
             this.GraficaEi.Location = new System.Drawing.Point(7, 25);
             this.GraficaEi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GraficaEi.Name = "GraficaEi";
@@ -207,10 +207,10 @@
             // 
             this.GraficaYdYR.BackColor = System.Drawing.Color.Transparent;
             this.GraficaYdYR.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea6.Name = "ChartArea1";
-            this.GraficaYdYR.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.GraficaYdYR.Legends.Add(legend6);
+            chartArea2.Name = "ChartArea1";
+            this.GraficaYdYR.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.GraficaYdYR.Legends.Add(legend2);
             this.GraficaYdYR.Location = new System.Drawing.Point(7, 23);
             this.GraficaYdYR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GraficaYdYR.Name = "GraficaYdYR";
@@ -290,6 +290,7 @@
             this.button_Simular.TabIndex = 35;
             this.button_Simular.Text = "Simular";
             this.button_Simular.UseVisualStyleBackColor = false;
+            this.button_Simular.Click += new System.EventHandler(this.button_Simular_Click);
             // 
             // FrmUnicapa
             // 
@@ -312,7 +313,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmUnicapa";
             this.Text = "FrmUnicapa";
-            this.Load += new System.EventHandler(this.FrmUnicapa_Load);
             this.gbAE_unicapa.ResumeLayout(false);
             this.gbFA_unicapa.ResumeLayout(false);
             this.gbMatriz.ResumeLayout(false);

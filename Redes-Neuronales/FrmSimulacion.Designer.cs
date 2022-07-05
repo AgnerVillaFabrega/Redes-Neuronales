@@ -23,22 +23,22 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGV_Principal = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Text_Simular = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Principal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // DGV_Principal
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 108);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(592, 445);
-            this.dataGridView1.TabIndex = 0;
+            this.DGV_Principal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Principal.Location = new System.Drawing.Point(12, 108);
+            this.DGV_Principal.Name = "DGV_Principal";
+            this.DGV_Principal.RowHeadersWidth = 51;
+            this.DGV_Principal.RowTemplate.Height = 24;
+            this.DGV_Principal.Size = new System.Drawing.Size(592, 445);
+            this.DGV_Principal.TabIndex = 0;
             // 
             // dataGridView2
             // 
@@ -67,11 +67,12 @@
             this.ClientSize = new System.Drawing.Size(1376, 717);
             this.Controls.Add(this.Text_Simular);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGV_Principal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmSimulacion";
             this.Text = "FrmSimulacion";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmSimulacion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Principal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -80,7 +81,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGV_Principal;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label Text_Simular;
     }
