@@ -68,12 +68,6 @@ namespace Redes_Neuronales
                     this.Hide();
                     frmPrincipal.Show();
                 }
-                else if (txtUser.Text.Equals("user") && txtPass.Text.Equals("1234"))
-                {
-                    cont = 0;
-                    this.Hide();
-                    frmSimulacion.Show();
-                }
                 else
                 {
                     cont += 1;
